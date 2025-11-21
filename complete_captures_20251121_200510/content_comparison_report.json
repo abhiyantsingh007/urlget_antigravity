@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "endpoints_added": [
+      "https://eg-pz.qa.egalvanic.ai/api/company/alliance-config/acme.egalvanic"
+    ],
+    "endpoints_removed": [
+      "https://acme.qa.egalvanic.ai/api/users/profile",
+      "https://acme.qa.egalvanic.ai/api/dashboard/stats",
+      "https://acme.qa.egalvanic.ai/api/notifications",
+      "https://acme.qa.egalvanic.ai/api/sites",
+      "https://acme.qa.egalvanic.ai/api/sites/list",
+      "https://acme.qa.egalvanic.ai/api/sites/all"
+    ],
+    "endpoints_unchanged": [],
+    "endpoints_changed": []
+  },
+  "details": {}
+}

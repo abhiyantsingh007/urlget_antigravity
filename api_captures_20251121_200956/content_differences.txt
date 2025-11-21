@@ -1,0 +1,14 @@
+ACME API CONTENT COMPARISON REPORT
+==================================================
+First capture: api_captures_20251121_200411
+Second capture: api_captures_20251121_200956
+==================================================
+
+UNCHANGED API ENDPOINTS:
+  = https://acme.qa.egalvanic.ai/api/users/profile
+  = https://acme.qa.egalvanic.ai/api/dashboard/stats
+  = https://acme.qa.egalvanic.ai/api/sites/all
+  = https://acme.qa.egalvanic.ai/api/notifications
+  = https://acme.qa.egalvanic.ai/api/sites
+  = https://acme.qa.egalvanic.ai/api/sites/list
+

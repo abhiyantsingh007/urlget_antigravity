@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "endpoints_added": [
+      "https://acme.qa.egalvanic.ai/api/users/profile",
+      "https://acme.qa.egalvanic.ai/api/notifications",
+      "https://acme.qa.egalvanic.ai/api/sites/list",
+      "https://acme.qa.egalvanic.ai/api/sites/all",
+      "https://acme.qa.egalvanic.ai/api/sites",
+      "https://acme.qa.egalvanic.ai/api/dashboard/stats"
+    ],
+    "endpoints_removed": [],
+    "endpoints_unchanged": [],
+    "endpoints_changed": []
+  },
+  "details": {}
+}

@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "files_added": [
+      "api_response_1.json"
+    ],
+    "files_removed": [
+      "response_6.json",
+      "response_1.json",
+      "response_4.json",
+      "response_2.json",
+      "response_5.json",
+      "response_3.json"
+    ],
+    "files_unchanged": [],
+    "files_changed": []
+  },
+  "details": {}
+}

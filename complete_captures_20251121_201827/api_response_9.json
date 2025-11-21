@@ -1,0 +1,59 @@
+{
+  "url": "https://acme.qa.egalvanic.ai/api/lookup/nodes/8eebf615-f616-4034-ac53-c54144520080",
+  "status": 200,
+  "mimeType": "application/json",
+  "timestamp": 1763736540664,
+  "response": {
+    "data": [
+      {
+        "building_name": null,
+        "com": 1,
+        "core_attributes": [],
+        "display_name": "hghg",
+        "floor_name": null,
+        "id": "49859c2a-a9bc-4200-97d9-bf22875ab94d",
+        "label": "hghg",
+        "location": null,
+        "node_class": "454e8e5d-5a89-4ba1-aa58-1e6c54367715",
+        "node_class_name": "Circuit Breaker",
+        "parent_id": null,
+        "qr_code": null,
+        "room_id": null,
+        "room_name": null
+      },
+      {
+        "building_name": null,
+        "com": 1,
+        "core_attributes": [],
+        "display_name": "test",
+        "floor_name": null,
+        "id": "28ff6a83-24be-4ab9-803a-a7251b175100",
+        "label": "test",
+        "location": null,
+        "node_class": "a1bc7f83-eafa-462e-a65f-3a475e211c72",
+        "node_class_name": "ATS",
+        "parent_id": null,
+        "qr_code": null,
+        "room_id": null,
+        "room_name": null
+      },
+      {
+        "building_name": null,
+        "com": 1,
+        "core_attributes": [],
+        "display_name": "Test 1",
+        "floor_name": null,
+        "id": "56be3726-1772-41dc-9bf9-3e7793d3914b",
+        "label": "Test 1",
+        "location": null,
+        "node_class": "50e387d2-a358-4dd1-81cd-0aebe4d09d42",
+        "node_class_name": "Capacitor",
+        "parent_id": null,
+        "qr_code": null,
+        "room_id": null,
+        "room_name": null
+      }
+    ],
+    "success": true
+  }
+}

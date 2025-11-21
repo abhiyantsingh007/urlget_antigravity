@@ -1,0 +1,12 @@
+{
+  "url": "https://bqitb0ghqa.execute-api.us-east-2.amazonaws.com/api/sld/sessions?sld_id=",
+  "status": 200,
+  "mimeType": "application/json",
+  "timestamp": 1763736985091,
+  "response": {
+    "session_id": "0b34d204-6732-425b-8a9e-3c89b77ecd4f",
+    "sld_id": "",
+    "created_at": "2025-11-21T14:53:03.081847",
+    "message": "Session created for SLD "
+  }
+}

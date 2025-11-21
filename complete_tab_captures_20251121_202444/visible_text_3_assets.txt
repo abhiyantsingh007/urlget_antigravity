@@ -1,0 +1,68 @@
+Assets
+Site:
+R
+rahul+acme@egalvanic.com
+Egalvanic
+DASHBOARDS
+Site Overview
+Arc Flash Readiness
+Equipment Insights
+DATA
+SLDs
+Assets
+Connections
+Locations
+OPERATIONS
+Jobs
+Scheduling
+Site Visits
+Issues
+Attachments
+SALES
+Opportunities
+Accounts
+SETTINGS
+Settings
+Overall Arc Flash Readiness
+3 assets • 0 of 8 required fields completed
+0%
+Complete
+Create Asset
+Bulk Upload
+SKM Import
+Asset Name
+QR Code
+Condition
+Asset Class
+Building
+Floor
+Room
+Parent Asset
+Actions
+hghg
+—
+1
+Circuit Breaker
+—
+—
+—
+—
+test
+—
+1
+ATS
+—
+—
+—
+—
+Test 1
+—
+1
+Capacitor
+—
+—
+—
+—
+Rows per page:
+25
+1–3 of 3

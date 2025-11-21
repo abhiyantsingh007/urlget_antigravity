@@ -1,0 +1,17 @@
+ACME API MIGRATION COMPARISON REPORT
+==================================================
+Before migration data: api_captures_20251121_195757
+After migration data: complete_captures_20251121_195939
+==================================================
+
+NEWLY ADDED API ENDPOINTS:
+  + api_response_1.json
+
+REMOVED API ENDPOINTS:
+  - response_6.json
+  - response_1.json
+  - response_4.json
+  - response_2.json
+  - response_5.json
+  - response_3.json
+

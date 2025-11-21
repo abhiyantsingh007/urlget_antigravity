@@ -1,0 +1,12 @@
+{
+  "url": "https://bqitb0ghqa.execute-api.us-east-2.amazonaws.com/api/sld/sessions?sld_id=8eebf615-f616-4034-ac53-c54144520080",
+  "status": 200,
+  "mimeType": "application/json",
+  "timestamp": 1763736540668,
+  "response": {
+    "session_id": "a2a45b2a-2ce8-4710-a569-cd15444744b2",
+    "sld_id": "8eebf615-f616-4034-ac53-c54144520080",
+    "created_at": "2025-11-21T14:45:40.250752",
+    "message": "Session created for SLD 8eebf615-f616-4034-ac53-c54144520080"
+  }
+}

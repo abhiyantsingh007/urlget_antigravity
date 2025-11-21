@@ -1,0 +1,30 @@
+{
+  "url": "https://acme.qa.egalvanic.ai/api/users/profile",
+  "status_code": 200,
+  "headers": {
+    "Content-Type": "application/json",
+    "Content-Length": "283",
+    "Connection": "keep-alive",
+    "Date": "Fri, 21 Nov 2025 14:24:42 GMT",
+    "Server": "gunicorn",
+    "X-Cache": "Miss from cloudfront",
+    "Via": "1.1 e38fa52c96dc5cfd2a6e8c15e77e685c.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Pop": "BOM78-P11",
+    "X-Amz-Cf-Id": "SPVlWYTk00KIK92JL9Z7rlJ-muzlZTJ46l2pEpoQOQA48fllQXgbaQ=="
+  },
+  "response": {
+    "id": null,
+    "username": null,
+    "email": null,
+    "company_id": null,
+    "given_name": null,
+    "family_name": null,
+    "timezone": null,
+    "created_at": null,
+    "updated_at": null,
+    "is_active": null,
+    "active": null,
+    "roles": null,
+    "role": null
+  }
+}

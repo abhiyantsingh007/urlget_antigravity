@@ -1,0 +1,110 @@
+{
+  "url": "https://acme.qa.egalvanic.ai/api/users/96aa4804-5303-450d-bb27-ed33b65e172d/slds",
+  "status": 200,
+  "mimeType": "application/json",
+  "timestamp": 1763736540675,
+  "response": [
+    {
+      "account_id": null,
+      "account_name": null,
+      "address_coordinates": null,
+      "address_formatted": null,
+      "address_line_1": null,
+      "address_line_2": null,
+      "city": null,
+      "country_code": null,
+      "created_at": "2025-09-18T17:12:01.574000+00:00",
+      "id": "8eebf615-f616-4034-ac53-c54144520080",
+      "is_deleted": false,
+      "name": "ShowSite3",
+      "postal_code": null,
+      "state_province": null
+    },
+    {
+      "account_id": null,
+      "account_name": null,
+      "address_coordinates": {
+        "latitude": 21.5804024,
+        "longitude": 70.3791611
+      },
+      "address_formatted": "Ahmedabad \nAhmedabad \nAhmedabad , SA, 362011\nAustralia",
+      "address_line_1": "Ahmedabad ",
+      "address_line_2": "Ahmedabad ",
+      "city": "Ahmedabad ",
+      "country_code": "AU",
+      "created_at": "2025-11-14T04:27:39.239419+00:00",
+      "id": "21bd10d4-cb0e-4e21-9722-9cd6219cedfc",
+      "is_deleted": false,
+      "name": "test site",
+      "postal_code": "362011",
+      "state_province": "SA"
+    },
+    {
+      "account_id": null,
+      "account_name": null,
+      "address_coordinates": null,
+      "address_formatted": "46-50 Old Bond St\nMayfair, London W1S 4QT\nUnited Kingdom, England, E1 6AN\nUnited Kingdom",
+      "address_line_1": "46-50 Old Bond St",
+      "address_line_2": "Mayfair, London W1S 4QT",
+      "city": "United Kingdom",
+      "country_code": "GB",
+      "created_at": "2025-11-17T13:00:22.573727+00:00",
+      "id": "fdc8898b-38f4-4094-9534-5b91c5b14015",
+      "is_deleted": false,
+      "name": "London, UK",
+      "postal_code": "E1 6AN",
+      "state_province": "England"
+    },
+    {
+      "account_id": null,
+      "account_name": null,
+      "address_coordinates": null,
+      "address_formatted": "1425 10th Avenue\nPO Box 4001, Victoria BC V8X 3X4,\nCanada, PE, T5T 4J5\nCanada",
+      "address_line_1": "1425 10th Avenue",
+      "address_line_2": "PO Box 4001, Victoria BC V8X 3X4,",
+      "city": "Canada",
+      "country_code": "CA",
+      "created_at": "2025-11-17T13:03:26.647470+00:00",
+      "id": "95aa5079-f72e-494f-a82e-0317d70ac39c",
+      "is_deleted": false,
+      "name": "Toronto, Canada",
+      "postal_code": "T5T 4J5",
+      "state_province": "PE"
+    },
+    {
+      "account_id": null,
+      "account_name": null,
+      "address_coordinates": null,
+      "address_formatted": "LOWER HOTHAM\nWestern Australia(WA),\nMelbourne, WA, 4361\nAustralia",
+      "address_line_1": "LOWER HOTHAM",
+      "address_line_2": "Western Australia(WA),",
+      "city": "Melbourne",
+      "country_code": "AU",
+      "created_at": "2025-11-17T13:06:19.440950+00:00",
+      "id": "f8a1d7e7-5465-4f05-ae0f-eddfeb4bdd6e",
+      "is_deleted": false,
+      "name": "Melbourne, AU",
+      "postal_code": "4361",
+      "state_province": "WA"
+    },
+    {
+      "account_id": null,
+      "account_name": null,
+      "address_coordinates": {
+        "latitude": 23.0325142,
+        "longitude": 72.5082675
+      },
+      "address_formatted": "Mahakali Road\nAhmedabad, PE, 380059\nCanada",
+      "address_line_1": "Mahakali Road",
+      "address_line_2": null,
+      "city": "Ahmedabad",
+      "country_code": "CA",
+      "created_at": "2025-11-20T08:47:03.144441+00:00",
+      "id": "ba4241f4-80ac-49bf-89e3-708c7a0017d8",
+      "is_deleted": false,
+      "name": "test",
+      "postal_code": "380059",
+      "state_province": "PE"
+    }
+  ]
+}
