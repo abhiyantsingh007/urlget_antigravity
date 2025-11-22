@@ -1,0 +1,11 @@
+{
+  "capture_timestamp": "2025-11-21T23:09:10.549337",
+  "base_url": "https://acme.qa.egalvanic.ai",
+  "pages_captured": [
+    "dashboard",
+    "sites",
+    "profile"
+  ],
+  "api_responses_captured": 3,
+  "output_directory": "demo_capture_20251121_230910"
+}

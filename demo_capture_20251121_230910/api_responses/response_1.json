@@ -1,0 +1,10 @@
+{
+  "url": "https://acme.qa.egalvanic.ai/api/dashboard/stats",
+  "status": 200,
+  "response": {
+    "total_sites": 42,
+    "active_users": 127,
+    "pending_issues": 5,
+    "completed_tasks": 203
+  }
+}

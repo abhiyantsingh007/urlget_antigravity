@@ -1,0 +1,23 @@
+{
+  "url": "https://acme.qa.egalvanic.ai/api/sites",
+  "status": 200,
+  "response": {
+    "sites": [
+      {
+        "id": 1,
+        "name": "Site A",
+        "status": "active"
+      },
+      {
+        "id": 2,
+        "name": "Site B",
+        "status": "maintenance"
+      },
+      {
+        "id": 3,
+        "name": "Site C",
+        "status": "active"
+      }
+    ]
+  }
+}

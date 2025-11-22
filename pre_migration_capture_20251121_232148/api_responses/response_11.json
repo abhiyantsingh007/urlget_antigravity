@@ -1,0 +1,234 @@
+{
+  "url": "https://acme.qa.egalvanic.ai/api/issue_classes/user/96aa4804-5303-450d-bb27-ed33b65e172d",
+  "status": 200,
+  "mimeType": "application/json",
+  "timestamp": 1763748319592,
+  "response": [
+    {
+      "company_id": null,
+      "definition": [
+        {
+          "af_required": true,
+          "description": "Subcategory of the issue",
+          "id": "5d02a85b-f903-4297-ae84-43f3b45017b5",
+          "index": 0,
+          "name": "Subcategory",
+          "options": [
+            "Clearance - Insufficient Access",
+            "Enclosure - Broken locking mechanism",
+            "Enclosure - Damaged",
+            "Enclosure - Should be waterproof",
+            "Equipment - Free of Hazards",
+            "Grounding - Must be permanent & continuous",
+            "Lighting - Inadequate around equipment",
+            "Marking/Labels - Inadequate or missing information on equipment",
+            "Mounting - Should be secure",
+            "Noise - Excessive",
+            "Wire - Exposed"
+          ],
+          "type": "select"
+        }
+      ],
+      "id": "b7ac4e17-d7ac-49cd-8d29-c04070da154a",
+      "is_deleted": false,
+      "is_global": true,
+      "name": "OSHA Violation"
+    },
+    {
+      "company_id": null,
+      "definition": [
+        {
+          "af_required": true,
+          "description": "Subcategory of the issue",
+          "id": "b2d45caa-a272-4274-9d83-0ef9747f9c3c",
+          "index": 0,
+          "name": "Subcategory",
+          "options": [
+            "Chapter 28.3.2 Motor Control Equipment Cleaning",
+            "Chapter 28.3.1 Visual Inspections",
+            "Chapter 13.3.1 Visual Inspections",
+            "Chapter 15.3.2 Circuit Breakers Low- and Medium Voltage",
+            "Chapter 15.3.1 Visual Inspections",
+            "Chapter 25.3.2 UPS Cleaning",
+            "Chapter 25.3.1 Visual Inspections",
+            "Chapter 11.3.2 Power and Distribution Transformer Cleaning",
+            "Chapter 11.3.1 Visual Inspections",
+            "Chapter 12.3.2 Substations and Switchgear Cleaning",
+            "Chapter 12.3.1 Visual Inspections",
+            "Chapter 13.5.2 Panelboards and Switchboards Cleaning",
+            "Chapter 17.3.1 Visual Inspections"
+          ],
+          "type": "select"
+        }
+      ],
+      "id": "bcb00c2c-f2f0-482b-b46c-0c84a86ad26a",
+      "is_deleted": false,
+      "is_global": true,
+      "name": "NFPA 70B Violation"
+    },
+    {
+      "company_id": null,
+      "definition": [],
+      "id": "0beca5c1-330b-48a2-9b9d-895daed0a821",
+      "is_deleted": false,
+      "is_global": true,
+      "name": "Ultrasonic Anomaly"
+    },
+    {
+      "company_id": null,
+      "definition": [],
+      "id": "68929c2a-e9e4-403a-8a50-376c52c70687",
+      "is_deleted": false,
+      "is_global": true,
+      "name": "Repair Needed"
+    },
+    {
+      "company_id": null,
+      "definition": [
+        {
+          "af_required": true,
+          "description": "Thermal Classification",
+          "id": "95c3a45a-76e5-4cc8-87cb-0f71cf1397be",
+          "index": 0,
+          "name": "Severity",
+          "options": [
+            "Nominal",
+            "Intermediate",
+            "Serious",
+            "Critical"
+          ],
+          "type": "select"
+        },
+        {
+          "af_required": false,
+          "description": "The severity criteria used in determining severity",
+          "id": "277ed00f-de6a-49bb-b670-10406f9a5342",
+          "index": 1,
+          "name": "Severity Criteria",
+          "options": [
+            "Similar",
+            "Ambient",
+            "Indirect"
+          ],
+          "type": "select"
+        },
+        {
+          "af_required": false,
+          "description": "The position where the anomaly is being detected",
+          "id": "1a14f684-6fc7-43df-8e62-bde7ea58c3ab",
+          "index": 2,
+          "name": "Position",
+          "options": [],
+          "type": "textfield"
+        },
+        {
+          "af_required": true,
+          "description": "The hotspot temperature",
+          "id": "a6030fe3-8f12-4c1e-a4bb-f6c681b57261",
+          "index": 3,
+          "name": "Problem Temp",
+          "options": [],
+          "type": "number"
+        },
+        {
+          "af_required": true,
+          "description": "The comparative temperature",
+          "id": "cf9b0d97-946d-473c-b069-0db30e89a860",
+          "index": 4,
+          "name": "Reference Temp",
+          "options": [],
+          "type": "number"
+        },
+        {
+          "af_required": false,
+          "columns": [
+            "A",
+            "B",
+            "C",
+            "N"
+          ],
+          "description": "The current draw across all phases",
+          "id": "4b219fc1-ed74-4436-84ad-d32e526c8f91",
+          "index": 5,
+          "internal_type": [
+            "number",
+            "number",
+            "number",
+            "number"
+          ],
+          "name": "Current Draw (A)",
+          "options": [],
+          "type": "table_with_column_headers"
+        },
+        {
+          "af_required": false,
+          "columns": [
+            "A",
+            "B",
+            "C",
+            "N"
+          ],
+          "description": "The voltage drop draw across all phases",
+          "id": "90ec5aac-cb27-4732-963a-17c9daee07ca",
+          "index": 6,
+          "internal_type": [
+            "number",
+            "number",
+            "number",
+            "number"
+          ],
+          "name": "Voltage Drop (mV)",
+          "options": [],
+          "type": "table_with_column_headers"
+        }
+      ],
+      "id": "88903684-01f1-4057-bd91-ff567e227462",
+      "is_deleted": false,
+      "is_global": true,
+      "name": "Thermal Anomaly"
+    },
+    {
+      "company_id": null,
+      "definition": [
+        {
+          "af_required": true,
+          "description": "Subcategory of the issue",
+          "id": "d295936c-9a21-4327-9d46-9941ab6d0dfb",
+          "index": 0,
+          "name": "Subcategory",
+          "options": [
+            "Breaker is restricted from freely operating (NEC 240.8)",
+            "Exceeds panel limit (NEC 408.36)",
+            "Visible Corrosion",
+            "Improperly fastened or secured (NEC 300.11(A))",
+            "Missing dead front, door, cover, etc. (NEC 110.12(A))",
+            "Wire bundle should have listed bushing",
+            "Wire burned or damaged",
+            "Bonding and grounding requirement (NEC 250.97)",
+            "Inadequate ventilation/cooling for component",
+            "Connection made without damaging wire (NEC 110.14(A))",
+            "1 wire per terminal (NEC 110.14(A))",
+            "Improper neutral conductor (NEC 200.4(A))",
+            "Not protected from damage (NEC 300.4)",
+            "Size wrong for load (NEC 210.19(A))",
+            "Need earth connection (NEC 250.4(A))",
+            "Missing or insufficient information (NEC 110.21(B) or 408.4)",
+            "Damaged/broken parts",
+            "Missing arc flash and shock hazard warning labels (NEC 110.16(A))",
+            "Exposed energized parts (NEC 240.50(D))",
+            "Must be free of foreign materials (NEC 110.12(B) / NFPA 70B 13.3.2)",
+            "Unused opening must be sealed (NEC 110.12(A) / 312.5(A))",
+            "Parallel fuses must match (NEC 240.8)",
+            "Lack of component integrity",
+            "Not installed in a proper worklike manner"
+          ],
+          "type": "select"
+        }
+      ],
+      "id": "3fe9a8ca-be57-48d7-a85a-3254999745fd",
+      "is_deleted": false,
+      "is_global": true,
+      "name": "NEC Violation"
+    }
+  ]
+}

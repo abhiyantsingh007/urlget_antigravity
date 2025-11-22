@@ -1,0 +1,39 @@
+Issues
+Site:
+R
+rahul+acme@egalvanic.com
+Egalvanic
+DASHBOARDS
+Site Overview
+Arc Flash Readiness
+Equipment Insights
+DATA
+SLDs
+Assets
+Connections
+Locations
+OPERATIONS
+Jobs
+Scheduling
+Site Visits
+Issues
+Attachments
+SALES
+Opportunities
+Accounts
+SETTINGS
+Settings
+Create Issue
+Title
+Issue Class
+Priority
+Asset
+Session
+Site
+Created
+Status
+Actions
+No rows
+Rows per page:
+25
+0–0 of 0

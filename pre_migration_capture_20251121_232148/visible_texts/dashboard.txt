@@ -1,0 +1,41 @@
+Site Overview
+Site:
+R
+rahul+acme@egalvanic.com
+Egalvanic
+DASHBOARDS
+Site Overview
+Arc Flash Readiness
+Equipment Insights
+DATA
+SLDs
+Assets
+Connections
+Locations
+OPERATIONS
+Jobs
+Scheduling
+Site Visits
+Issues
+Attachments
+SALES
+Opportunities
+Accounts
+SETTINGS
+Settings
+TOTAL ASSETS
+3
+UNRESOLVED ISSUES
+0
+PENDING TASKS
+0
+ACTIVE SITE VISITS
+1
+OPPORTUNITIES VALUE
+$0k
+EQUIPMENT AT RISK
+$0k
+Assets by Type
+ATSCapacitorCircuit Breaker
+Issues by Type
+No issues data available

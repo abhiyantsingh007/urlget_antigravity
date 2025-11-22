@@ -1,0 +1,10 @@
+{
+  "url": "https://acme.qa.egalvanic.ai/api/profile",
+  "status": 200,
+  "response": {
+    "user_id": 1001,
+    "name": "Rahul Patel",
+    "email": "rahul@egalvanic.com",
+    "role": "administrator"
+  }
+}

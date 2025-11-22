@@ -1,0 +1,41 @@
+{
+  "url": "https://eg-pz.qa.egalvanic.ai/api/company/alliance-config/acme.egalvanic",
+  "status": 200,
+  "mimeType": "application/json",
+  "timestamp": 1763748309220,
+  "response": {
+    "alliance_partner": {
+      "branding": {
+        "accent_color": "#bf1e2e",
+        "large_logo": "https://eg-pz-qa-s3-branding-ohio.s3.us-east-2.amazonaws.com/alliance-partner-logos/egalvanic-logo-large.png",
+        "primary_color": "#3a3a3c",
+        "small_logo": "https://eg-pz-qa-s3-branding-ohio.s3.us-east-2.amazonaws.com/alliance-partner-logos/eg-logo-small.png"
+      },
+      "display_name": "Egalvanic",
+      "id": "e61eac0c-272e-4fcb-9acb-d05cb2212d16",
+      "invoke_url": "https://acme.qa.egalvanic.ai/api",
+      "name": "egalvanic"
+    },
+    "company": {
+      "address": {
+        "city": null,
+        "country_code": null,
+        "formatted": null,
+        "line_1": null,
+        "line_2": null,
+        "postal_code": null,
+        "state_province": null
+      },
+      "branding": {
+        "accent_color": null,
+        "large_logo": "https://eg-pz-qa-s3-branding-ohio.s3.us-east-2.amazonaws.com/logos/acme.png",
+        "primary_color": null,
+        "small_logo": "https://eg-pz-qa-s3-branding-ohio.s3.us-east-2.amazonaws.com/logos/acme.png"
+      },
+      "id": "d59d449b-09d8-45d6-8f0a-ef70024b1293",
+      "name": "EG-ACME",
+      "subdomain": "acme"
+    },
+    "success": true
+  }
+}

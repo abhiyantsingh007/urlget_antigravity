@@ -1,0 +1,45 @@
+[
+  {
+    "url": "https://acme.qa.egalvanic.ai/api/dashboard/stats",
+    "status": 200,
+    "response": {
+      "total_sites": 42,
+      "active_users": 127,
+      "pending_issues": 5,
+      "completed_tasks": 203
+    }
+  },
+  {
+    "url": "https://acme.qa.egalvanic.ai/api/sites",
+    "status": 200,
+    "response": {
+      "sites": [
+        {
+          "id": 1,
+          "name": "Site A",
+          "status": "active"
+        },
+        {
+          "id": 2,
+          "name": "Site B",
+          "status": "maintenance"
+        },
+        {
+          "id": 3,
+          "name": "Site C",
+          "status": "active"
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://acme.qa.egalvanic.ai/api/profile",
+    "status": 200,
+    "response": {
+      "user_id": 1001,
+      "name": "Rahul Patel",
+      "email": "rahul@egalvanic.com",
+      "role": "administrator"
+    }
+  }
+]
