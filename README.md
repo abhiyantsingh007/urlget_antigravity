@@ -34,9 +34,7 @@ This framework automates the process of capturing API responses and UI data from
 
 1. Update the credentials in [data_capture_framework.py](file:///c%3A/Users/Abhiyant/Downloads/sculptsoft/Get%20all_json_response/data_capture_framework.py) if needed:
    ```python
-   BASE_URL = "https://acme.qa.egalvanic.ai"
-   EMAIL = "rahul@egalvanic.com"
-   PASSWORD = "RP@egalvanic123"
+   
    ```
 
 2. Run the capture script:
