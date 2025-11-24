@@ -1,0 +1,110 @@
+/Users/vishwa/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+============================================================
+STEP 1: Capturing assets from RND website
+============================================================
+
+############################################################
+# Capturing assets from: https://acme.egalvanic-rnd.com
+# Site: Super Caremark
+############################################################
+
+============================================================
+Logging into: https://acme.egalvanic-rnd.com
+============================================================
+✓ Entered email: rahul+acme@egalvanic.com
+✓ Entered password
+✓ Clicked Sign In
+✓ Login successful!
+
+🔍 Navigating to Assets page...
+✓ Navigated to Assets page
+
+✓ Total assets available: 179
+
+⚙ Setting rows per page to 100...
+✓ Set to 100 rows per page
+
+📄 Processing page 1...
+  Found 0 potential row elements
+  Trying alternative extraction method...
+  ⚠ No assets extracted from page 1
+  Total assets captured so far: 0
+
+📄 Processing page 2...
+  Found 0 potential row elements
+  Trying alternative extraction method...
+  ⚠ No assets extracted from page 2
+  Total assets captured so far: 0
+
+✓ No more pages. Captured 0 assets total.
+
+✓ Saved RND assets: rnd_complete_assets_20251124_180402.json
+
+============================================================
+STEP 2: Capturing assets from AI website
+============================================================
+
+############################################################
+# Capturing assets from: https://acme.egalvanic.ai
+# Site: Super Caremark
+############################################################
+
+============================================================
+Logging into: https://acme.egalvanic.ai
+============================================================
+✓ Entered email: rahul+acme@egalvanic.com
+✓ Entered password
+✓ Clicked Sign In
+✓ Login successful!
+
+🔍 Navigating to Assets page...
+✓ Navigated to Assets page
+
+✓ Total assets available: 180
+
+⚙ Setting rows per page to 100...
+✓ Set to 100 rows per page
+
+📄 Processing page 1...
+  Found 0 potential row elements
+  Trying alternative extraction method...
+  ⚠ No assets extracted from page 1
+  Total assets captured so far: 0
+
+📄 Processing page 2...
+  Found 0 potential row elements
+  Trying alternative extraction method...
+  ⚠ No assets extracted from page 2
+  Total assets captured so far: 0
+
+✓ No more pages. Captured 0 assets total.
+
+✓ Saved AI assets: ai_complete_assets_20251124_180402.json
+
+============================================================
+STEP 3: Comparing assets
+============================================================
+
+============================================================
+📊 ASSET COMPARISON ANALYSIS
+============================================================
+✓ Saved comparison: detailed_asset_comparison_20251124_180402.json
+
+✓ Detailed HTML report generated: MISSING_ASSETS_REPORT_20251124_180402.html
+
+============================================================
+COMPARISON SUMMARY
+============================================================
+RND Total:              0
+AI Total:               0
+Difference:             +0
+Common Assets:          0
+Missing from AI:        0
+New in AI:              0
+Field Differences:      0
+============================================================
+
+✓ Open the HTML report for full details: MISSING_ASSETS_REPORT_20251124_180402.html
+============================================================

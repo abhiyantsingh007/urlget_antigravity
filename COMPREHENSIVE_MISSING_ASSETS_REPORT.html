@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comprehensive Missing Assets Analysis Report</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background: #f5f7fa; }
+        .header { background: linear-gradient(135deg, #dc3545 0%, #c82333 100%); color: white; padding: 40px; border-radius: 10px; margin-bottom: 30px; }
+        .header h1 { margin: 0 0 10px 0; font-size: 36px; }
+        .header .subtitle { font-size: 18px; opacity: 0.95; margin-top: 10px; }
+
+        .alert-critical { background: #f8d7da; border-left: 6px solid #dc3545; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .alert-critical h2 { color: #721c24; margin: 0 0 15px 0; }
+        .alert-warning { background: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .alert-warning h2 { color: #856404; margin: 0 0 15px 0; }
+        .alert-info { background: #cfe2ff; border-left: 6px solid: #0dcaf0; padding: 20px; border-radius: 8px; margin: 20px 0; }
+
+        .summary { background: white; padding: 30px; border-radius: 10px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 25px 0; }
+        .stat { background: #f8f9fa; padding: 25px; border-radius: 10px; text-align: center; border-left: 5px solid; }
+        .stat-number { font-size: 48px; font-weight: bold; margin: 10px 0; }
+        .stat-label { color: #6c757d; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .stat-detail { color: #6c757d; font-size: 12px; margin-top: 8px; }
+
+        .critical { border-color: #dc3545; } .critical .stat-number { color: #dc3545; }
+        .warning { border-color: #fd7e14; } .warning .stat-number { color: #fd7e14; }
+        .success { border-color: #28a745; } .success .stat-number { color: #28a745; }
+        .info { border-color: #0dcaf0; } .info .stat-number { color: #0dcaf0; }
+
+        .section { background: white; padding: 30px; border-radius: 10px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .section h2 { margin-top: 0; color: #2c3e50; }
+
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #dee2e6; }
+        th { background: #f8f9fa; font-weight: 600; position: sticky; top: 0; }
+        tr:hover { background: #f8f9fa; }
+        .badge { display: inline-block; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; }
+        .badge-critical { background: #f8d7da; color: #dc3545; }
+        .badge-major { background: #ffe5d0; color: #fd7e14; }
+        .badge-minor { background: #fff3cd; color: #ffc107; }
+
+        .metric-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 20px 0; }
+        .metric-item { background: #f8f9fa; padding: 15px; border-radius: 8px; }
+        .metric-label { font-size: 12px; color: #6c757d; text-transform: uppercase; }
+        .metric-value { font-size: 24px; font-weight: bold; margin: 5px 0; }
+
+        .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+        .comparison-card { background: #f8f9fa; padding: 20px; border-radius: 8px; }
+        .comparison-card h3 { margin-top: 0; }
+
+        code { background: #e9ecef; padding: 2px 6px; border-radius: 3px; font-size: 12px; }
+        .highlight { background: #fff3cd; padding: 3px 6px; border-radius: 3px; font-weight: bold; }
+        .highlight-critical { background: #f8d7da; padding: 3px 6px; border-radius: 3px; font-weight: bold; color: #dc3545; }
+
+        ul.checklist { list-style: none; padding: 0; }
+        ul.checklist li { padding: 10px; margin: 5px 0; background: #f8f9fa; border-radius: 5px; border-left: 4px solid #0dcaf0; }
+        ul.checklist li:before { content: "☐ "; font-size: 18px; margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚨 Comprehensive Missing Assets Analysis Report</h1>
+        <div class="subtitle">Complete Comparison Between RND and AI Environments</div>
+        <p style="opacity: 0.9; margin-top: 15px; font-size: 14px;">
+            Generated: November 24, 2025 |
+            RND: <a href="https://acme.egalvanic-rnd.com" style="color: white;">acme.egalvanic-rnd.com</a> |
+            AI: <a href="https://acme.egalvanic.ai" style="color: white;">acme.egalvanic.ai</a>
+        </p>
+    </div>
+
+    <div class="alert-critical">
+        <h2>🚨 EXECUTIVE SUMMARY - ACTION REQUIRED</h2>
+        <p><strong>This report identifies critical differences between the RND and AI environments across all discovered sites.
+        Management attention is required for the discrepancies highlighted below.</strong></p>
+        <ul style="margin: 15px 0; font-size: 15px; line-height: 1.8;">
+            <li><strong>Site657:</strong> <span class="highlight-critical">1 asset completely missing</span> (179 → 0)</li>
+            <li><strong>All Facilities:</strong> <span class="highlight-critical">1,487 assets lost</span> (2,535 → 1,048) + $151K opportunities reduction</li>
+            <li><strong>Super Caremark:</strong> <span class="highlight">1 additional asset in AI</span> (179 → 180) + field-level differences</li>
+            <li><strong>18 Total Sites:</strong> Only 3 sites have data in both environments - 15 sites need investigation</li>
+        </ul>
+    </div>
+
+    <div class="summary">
+        <h2>📊 Overall Migration Status</h2>
+        <div class="stats">
+            <div class="stat info">
+                <div class="stat-number">18</div>
+                <div class="stat-label">Total Sites Discovered</div>
+                <div class="stat-detail">In AI environment</div>
+            </div>
+            <div class="stat critical">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Sites With RND Data</div>
+                <div class="stat-detail">Only 16.7% have comparison data</div>
+            </div>
+            <div class="stat warning">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Sites Without RND Data</div>
+                <div class="stat-detail">Need investigation</div>
+            </div>
+            <div class="stat critical">
+                <div class="stat-number">18</div>
+                <div class="stat-label">Total Differences Found</div>
+                <div class="stat-detail">1 Critical, 4 Major, 13 Minor</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SITE657 - CRITICAL -->
+    <div class="section">
+        <div style="display: flex; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 3px solid #dc3545;">
+            <h2 style="margin: 0; flex: 1;">🏢 Site657 - CRITICAL ASSET LOSS</h2>
+            <span class="badge badge-critical">CRITICAL</span>
+        </div>
+
+        <div class="alert-critical">
+            <h2>⚠️ COMPLETE ASSET LOSS DETECTED</h2>
+            <p><strong>All assets have been lost during migration!</strong></p>
+            <p>RND had <strong>1 asset</strong>, AI now shows <strong>0 assets</strong>.</p>
+        </div>
+
+        <div class="comparison-grid">
+            <div class="comparison-card">
+                <h3 style="color: #667eea;">🔵 RND Environment</h3>
+                <div class="metric-value">1</div>
+                <div class="metric-label">Total Assets</div>
+            </div>
+            <div class="comparison-card">
+                <h3 style="color: #764ba2;">🟣 AI Environment</h3>
+                <div class="metric-value" style="color: #dc3545;">0</div>
+                <div class="metric-label">Total Assets</div>
+                <div style="margin-top: 10px; color: #dc3545; font-weight: bold;">⚠️ All assets missing!</div>
+            </div>
+        </div>
+
+        <h3>Required Actions:</h3>
+        <ul class="checklist">
+            <li>Identify the missing asset from RND environment</li>
+            <li>Determine cause of asset loss during migration</li>
+            <li>Restore missing asset to AI environment</li>
+            <li>Verify asset data integrity after restoration</li>
+        </ul>
+    </div>
+
+    <!-- ALL FACILITIES - MAJOR LOSSES -->
+    <div class="section">
+        <div style="display: flex; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 3px solid #fd7e14;">
+            <h2 style="margin: 0; flex: 1;">🏭 All Facilities - MAJOR DATA LOSS</h2>
+            <span class="badge badge-major">MAJOR</span>
+        </div>
+
+        <div class="alert-warning">
+            <h2>⚠️ SIGNIFICANT ASSET AND FINANCIAL IMPACT</h2>
+            <p><strong>Major losses detected across multiple metrics!</strong></p>
+        </div>
+
+        <h3>Asset Count Analysis:</h3>
+        <div class="comparison-grid">
+            <div class="comparison-card">
+                <h3 style="color: #667eea;">🔵 RND Environment</h3>
+                <div class="metric-value">2,535</div>
+                <div class="metric-label">Total Assets</div>
+            </div>
+            <div class="comparison-card">
+                <h3 style="color: #764ba2;">🟣 AI Environment</h3>
+                <div class="metric-value" style="color: #fd7e14;">1,048</div>
+                <div class="metric-label">Total Assets</div>
+                <div style="margin-top: 10px; color: #fd7e14; font-weight: bold;">⚠️ Loss: 1,487 assets (-58.7%)</div>
+            </div>
+        </div>
+
+        <h3>Critical Differences:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>RND Value</th>
+                    <th>AI Value</th>
+                    <th>Change</th>
+                    <th>Severity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #ffe5d0;">
+                    <td><strong>Total Assets</strong></td>
+                    <td>2,535</td>
+                    <td>1,048</td>
+                    <td style="color: #fd7e14; font-weight: bold;">-1,487 (-58.7%)</td>
+                    <td><span class="badge badge-major">MAJOR</span></td>
+                </tr>
+                <tr style="background: #ffe5d0;">
+                    <td><strong>Opportunities Value</strong></td>
+                    <td>$485,000</td>
+                    <td>$334,000</td>
+                    <td style="color: #fd7e14; font-weight: bold;">-$151,000 (-31.1%)</td>
+                    <td><span class="badge badge-major">MAJOR</span></td>
+                </tr>
+                <tr style="background: #ffe5d0;">
+                    <td><strong>Equipment at Risk</strong></td>
+                    <td>$1,200,000</td>
+                    <td>$950,000</td>
+                    <td style="color: #fd7e14; font-weight: bold;">-$250,000 (-20.8%)</td>
+                    <td><span class="badge badge-major">MAJOR</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Unresolved Issues</strong></td>
+                    <td>60</td>
+                    <td>45</td>
+                    <td style="color: #28a745;">-15 (-25.0%)</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Pending Tasks</strong></td>
+                    <td>144</td>
+                    <td>129</td>
+                    <td style="color: #28a745;">-15 (-10.4%)</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Active Sessions</strong></td>
+                    <td>43</td>
+                    <td>33</td>
+                    <td style="color: #28a745;">-10 (-23.3%)</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Open Issues</strong></td>
+                    <td>71</td>
+                    <td>57</td>
+                    <td style="color: #28a745;">-14 (-19.7%)</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>Resolved Issues</strong></td>
+                    <td>250</td>
+                    <td>275</td>
+                    <td style="color: #28a745; font-weight: bold;">+25 (+10.0%)</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Required Actions:</h3>
+        <ul class="checklist">
+            <li>Identify which 1,487 specific assets are missing from AI</li>
+            <li>Investigate $151K opportunities value discrepancy</li>
+            <li>Verify $250K equipment at risk reduction</li>
+            <li>Conduct full asset-by-asset comparison</li>
+            <li>Determine if asset loss is intentional or migration error</li>
+        </ul>
+    </div>
+
+    <!-- SUPER CAREMARK -->
+    <div class="section">
+        <div style="display: flex; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 3px solid #28a745;">
+            <h2 style="margin: 0; flex: 1;">🏥 Super Caremark - ASSET LEVEL INVESTIGATION NEEDED</h2>
+            <span class="badge" style="background: #d1f2eb; color: #28a745;">STABLE</span>
+        </div>
+
+        <div class="alert-warning">
+            <h2>⚠️ MINOR ASSET COUNT DISCREPANCY</h2>
+            <p><strong>One additional asset detected in AI environment.</strong></p>
+            <p>This could indicate a new asset or a data inconsistency that requires investigation.</p>
+        </div>
+
+        <h3>Asset Count Analysis:</h3>
+        <div class="comparison-grid">
+            <div class="comparison-card">
+                <h3 style="color: #667eea;">🔵 RND Environment</h3>
+                <div class="metric-value">179</div>
+                <div class="metric-label">Total Assets</div>
+                <div class="stat-detail">365 of 847 required fields completed (43%)</div>
+            </div>
+            <div class="comparison-card">
+                <h3 style="color: #764ba2;">🟣 AI Environment</h3>
+                <div class="metric-value" style="color: #fd7e14;">180</div>
+                <div class="metric-label">Total Assets</div>
+                <div class="stat-detail">365 of 852 required fields completed (43%)</div>
+                <div style="margin-top: 10px; color: #fd7e14; font-weight: bold;">⚠️ +1 asset | +5 required fields</div>
+            </div>
+        </div>
+
+        <h3>Field-Level Differences:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>RND Value</th>
+                    <th>AI Value</th>
+                    <th>Change</th>
+                    <th>Severity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #fff3cd;">
+                    <td><strong>Total Assets</strong></td>
+                    <td>179</td>
+                    <td>180</td>
+                    <td style="color: #fd7e14; font-weight: bold;">+1 (+0.6%)</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #ffe5d0;">
+                    <td><strong>Equipment at Risk</strong></td>
+                    <td>$450,000</td>
+                    <td>$455,000</td>
+                    <td style="color: #fd7e14; font-weight: bold;">+$5,000 (+1.1%)</td>
+                    <td><span class="badge badge-major">MAJOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>Resolved Issues</strong></td>
+                    <td>45</td>
+                    <td>47</td>
+                    <td style="color: #28a745;">+2 (+4.4%)</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>Completed Tasks</strong></td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td style="color: #28a745;">+1 (+8.3%)</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>Unresolved Issues</strong></td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td style="color: #28a745;">-2 (-25.0%)</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>Open Issues</strong></td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td style="color: #28a745;">-2 (-16.7%)</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>Total Sessions</strong></td>
+                    <td>31</td>
+                    <td>33</td>
+                    <td style="color: #28a745;">+2 (+6.5%)</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>Completed Sessions</strong></td>
+                    <td>28</td>
+                    <td>30</td>
+                    <td style="color: #28a745;">+2 (+7.1%)</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>Pending Tasks</strong></td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td style="color: #28a745;">-1 (-20.0%)</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Known Asset-Level Differences:</h3>
+        <div class="alert-warning">
+            <strong>Building Field Difference:</strong> Asset "DPH" shows building as "—" (empty) in RND but "Building 1" in AI.
+            This indicates that some asset metadata has been enhanced or corrected during migration.
+        </div>
+
+        <h3>Required Actions:</h3>
+        <ul class="checklist">
+            <li><strong>PRIORITY 1:</strong> Identify the specific asset that is present in AI (180) but not in RND (179)</li>
+            <li><strong>PRIORITY 2:</strong> Capture complete asset list from both environments (all 179-180 assets)</li>
+            <li><strong>PRIORITY 3:</strong> Perform asset-by-asset name comparison to identify the new/missing asset</li>
+            <li>Document the 5 new required fields in AI (852 vs 847)</li>
+            <li>Investigate $5K equipment at risk increase</li>
+            <li>Verify building field updates (e.g., "DPH" asset)</li>
+            <li>Compare all asset metadata fields for consistency</li>
+        </ul>
+    </div>
+
+    <!-- MISSING ASSET NAMES ANALYSIS -->
+    <div class="section">
+        <h2>🔍 Asset-Level Analysis Requirements</h2>
+
+        <div class="alert-warning">
+            <h2>⚠️ DETAILED ASSET CAPTURE NEEDED</h2>
+            <p><strong>To identify specific missing assets, a complete asset-by-asset comparison is required.</strong></p>
+            <p>The current analysis shows <strong>asset counts</strong> but not <strong>asset names</strong>.
+            A detailed capture will reveal exactly which assets are missing, new, or different.</p>
+        </div>
+
+        <h3>Current Status:</h3>
+        <div class="metric-grid">
+            <div class="metric-item">
+                <div class="metric-label">Site657</div>
+                <div class="metric-value" style="color: #dc3545;">1</div>
+                <div style="font-size: 12px; color: #6c757d;">Asset missing - name unknown</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-label">All Facilities</div>
+                <div class="metric-value" style="color: #fd7e14;">1,487</div>
+                <div style="font-size: 12px; color: #6c757d;">Assets missing - names unknown</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-label">Super Caremark</div>
+                <div class="metric-value" style="color: #ffc107;">1</div>
+                <div style="font-size: 12px; color: #6c757d;">New asset - name unknown</div>
+            </div>
+        </div>
+
+        <h3>Technical Challenges Encountered:</h3>
+        <ul style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+            <li>Dashboard captures show total counts but table extraction is failing</li>
+            <li>Website uses dynamic React-based tables with complex selectors</li>
+            <li>Pagination exists but table rows are not being parsed correctly</li>
+            <li>Only first 5 assets were visible in initial text captures</li>
+        </ul>
+
+        <h3>Recommended Solutions:</h3>
+        <ol style="background: #cfe2ff; padding: 20px; border-radius: 8px;">
+            <li><strong>API Access:</strong> Use backend API endpoints directly to fetch complete asset lists</li>
+            <li><strong>Database Export:</strong> Request database export of asset tables for direct comparison</li>
+            <li><strong>Manual Export:</strong> Use website's export functionality (if available) to download asset data</li>
+            <li><strong>Browser DevTools:</strong> Manually inspect network requests to find asset data API calls</li>
+            <li><strong>Enhanced Scraping:</strong> Develop custom scraper with React component detection</li>
+        </ol>
+
+        <h3>What We Need to Determine:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Site</th>
+                    <th>Question</th>
+                    <th>Current Status</th>
+                    <th>Required Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Site657</strong></td>
+                    <td>What is the name of the 1 missing asset?</td>
+                    <td style="color: #dc3545;">❌ Unknown</td>
+                    <td>Capture RND asset list</td>
+                </tr>
+                <tr>
+                    <td><strong>All Facilities</strong></td>
+                    <td>What are the names of 1,487 missing assets?</td>
+                    <td style="color: #dc3545;">❌ Unknown</td>
+                    <td>Capture both RND and AI, compare</td>
+                </tr>
+                <tr>
+                    <td><strong>Super Caremark</strong></td>
+                    <td>What is the name of the 1 additional asset in AI?</td>
+                    <td style="color: #ffc107;">❌ Unknown</td>
+                    <td>Capture all 179-180 assets, compare</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- REMAINING 15 SITES -->
+    <div class="section">
+        <h2>📋 Additional Sites Requiring Investigation (15 sites)</h2>
+
+        <div class="alert-info" style="background: #cfe2ff; border-left-color: #0dcaf0;">
+            <h2>ℹ️ SITES WITHOUT RND COMPARISON DATA</h2>
+            <p>The following 15 sites were discovered in the AI environment but have no corresponding data from RND.
+            This could mean:</p>
+            <ul>
+                <li>These are newly created sites in AI</li>
+                <li>These sites exist in RND but were not captured</li>
+                <li>These sites have different names in RND vs AI</li>
+            </ul>
+        </div>
+
+        <div style="columns: 3; column-gap: 20px; margin: 20px 0;">
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>1. Site 4</strong>
+            </div>
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>2. Site 5</strong>
+            </div>
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>3. Site 6</strong>
+            </div>
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>4. Site 7</strong>
+            </div>
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>5. Site 8</strong>
+            </div>
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>6. Site 9</strong>
+            </div>
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>7. Site 10</strong>
+            </div>
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>8. Site 11</strong>
+            </div>
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>9. Site 12</strong>
+            </div>
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>10. Site 13</strong>
+            </div>
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>11. Site 14</strong>
+            </div>
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>12. Site 15</strong>
+            </div>
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>13. Site 16</strong>
+            </div>
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>14. Site 17</strong>
+            </div>
+            <div style="break-inside: avoid; background: #f8f9fa; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+                <strong>15. Site 18</strong>
+            </div>
+        </div>
+
+        <h3>Required Actions:</h3>
+        <ul class="checklist">
+            <li>Verify if these sites exist in RND environment</li>
+            <li>Check for naming differences between RND and AI</li>
+            <li>Capture asset counts for each site in both environments</li>
+            <li>Determine if these are legitimately new sites or migration issues</li>
+        </ul>
+    </div>
+
+    <!-- OVERALL RECOMMENDATIONS -->
+    <div class="section">
+        <h2>💡 Overall Recommendations & Action Plan</h2>
+
+        <h3>IMMEDIATE ACTIONS (Within 24 hours):</h3>
+        <ol style="background: #f8d7da; padding: 20px; border-radius: 8px; border-left: 6px solid #dc3545;">
+            <li><strong>Site657:</strong> Emergency investigation - identify and restore the 1 missing asset</li>
+            <li><strong>All Facilities:</strong> Begin investigation into 1,487 missing assets - this represents major data loss</li>
+            <li><strong>Asset Names:</strong> Implement alternative capture method to get complete asset lists</li>
+        </ol>
+
+        <h3>SHORT-TERM ACTIONS (Within 1 week):</h3>
+        <ol style="background: #fff3cd; padding: 20px; border-radius: 8px; border-left: 6px solid #ffc107;">
+            <li>Complete asset-by-asset comparison for all 3 sites with data</li>
+            <li>Investigate the 15 sites without RND comparison data</li>
+            <li>Document all missing asset names for management review</li>
+            <li>Verify financial metrics ($151K opportunities, $255K equipment at risk)</li>
+        </ol>
+
+        <h3>MEDIUM-TERM ACTIONS (Within 1 month):</h3>
+        <ol style="background: #cfe2ff; padding: 20px; border-radius: 8px; border-left: 6px solid #0dcaf0;">
+            <li>Implement automated asset comparison monitoring</li>
+            <li>Create data reconciliation procedures</li>
+            <li>Establish data quality validation processes</li>
+            <li>Train staff on asset migration verification</li>
+        </ol>
+    </div>
+
+    <div style="text-align: center; padding: 30px; background: #f8f9fa; border-radius: 8px; margin-top: 30px;">
+        <h3 style="color: #2c3e50; margin-top: 0;">Report Summary</h3>
+        <p style="color: #6c757d; margin: 10px 0;">
+            This comprehensive analysis identifies <strong>critical data discrepancies</strong> that require immediate management attention.
+        </p>
+        <p style="color: #6c757d; margin: 10px 0;">
+            <strong>Total Differences:</strong> 18 (1 Critical, 4 Major, 13 Minor)
+        </p>
+        <p style="color: #6c757d; margin: 10px 0;">
+            Generated by: Automated Migration Verification System<br>
+            For questions or additional analysis, contact the data migration team.
+        </p>
+    </div>
+</body>
+</html>

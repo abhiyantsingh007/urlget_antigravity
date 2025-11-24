@@ -1,0 +1,15 @@
+{
+  "summary": {
+    "rnd_total": 0,
+    "ai_total": 0,
+    "difference": 0,
+    "common_assets": 0,
+    "only_in_rnd": 0,
+    "only_in_ai": 0,
+    "field_differences": 0
+  },
+  "missing_from_ai": [],
+  "missing_from_rnd": [],
+  "field_differences": [],
+  "timestamp": "2025-11-24T18:04:59.425753"
+}
