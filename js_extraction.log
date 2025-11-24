@@ -1,0 +1,127 @@
+/Users/vishwa/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+======================================================================
+STEP 1: CAPTURING FROM RND
+======================================================================
+
+######################################################################
+# CAPTURING ASSETS FROM: https://acme.egalvanic-rnd.com
+######################################################################
+
+
+======================================================================
+🔐 Logging into: https://acme.egalvanic-rnd.com
+======================================================================
+✓ Login successful!
+
+🔍 Navigating to Assets page...
+✓ Navigated via URL
+
+⚙️  Setting rows per page to 100...
+✓ Set to 100 rows per page
+
+🔧 Extracting assets using JavaScript...
+
+📸 Screenshot saved: assets_page_20251124_182042.png
+Strategy 1: Extracting all cell text...
+  Found 0 cell texts
+
+Strategy 2: Extracting table rows...
+  Found 0 rows
+
+Strategy 3: Extracting page text...
+  Saved page text to: page_text_20251124_182042.txt
+
+Strategy 4: MUI DataGrid extraction...
+  Found 8 DataGrid rows
+  First row: ['CB 175', '—', '1', 'Circuit Breaker', '—', '—', '—', 'Panelboard 174', '']
+
+📋 Parsing asset names from DataGrid...
+
+======================================================================
+✓ Captured 8 asset names
+======================================================================
+
+First 10 assets:
+  1. CB 175
+  2. CB 178
+  3. Disconnect Switch 176
+  4. DPH
+  5. DPH-01
+  6. DPH-02
+  7. DPH-03
+  8. DPH-04
+✓ Saved: rnd_assets_js_20251124_181949.json
+
+👋 Closing browser...
+
+======================================================================
+STEP 2: CAPTURING FROM AI
+======================================================================
+
+######################################################################
+# CAPTURING ASSETS FROM: https://acme.egalvanic.ai
+######################################################################
+
+
+======================================================================
+🔐 Logging into: https://acme.egalvanic.ai
+======================================================================
+✓ Login successful!
+
+🔍 Navigating to Assets page...
+✓ Navigated via URL
+
+⚙️  Setting rows per page to 100...
+✓ Set to 100 rows per page
+
+🔧 Extracting assets using JavaScript...
+
+📸 Screenshot saved: assets_page_20251124_182137.png
+Strategy 1: Extracting all cell text...
+  Found 0 cell texts
+
+Strategy 2: Extracting table rows...
+  Found 0 rows
+
+Strategy 3: Extracting page text...
+  Saved page text to: page_text_20251124_182137.txt
+
+Strategy 4: MUI DataGrid extraction...
+  Found 8 DataGrid rows
+  First row: ['CB 175', '—', '1', 'Circuit Breaker', '—', '—', '—', 'Panelboard 174', '']
+
+📋 Parsing asset names from DataGrid...
+
+======================================================================
+✓ Captured 8 asset names
+======================================================================
+
+First 10 assets:
+  1. CB 175
+  2. CB 178
+  3. Disconnect Switch 176
+  4. DPH
+  5. DPH-01
+  6. DPH-02
+  7. DPH-03
+  8. DPH-04
+✓ Saved: ai_assets_js_20251124_181949.json
+
+👋 Closing browser...
+
+======================================================================
+STEP 3: COMPARING ASSETS
+======================================================================
+
+RND Total:           8
+AI Total:            8
+Difference:          +0
+Common:              8
+Missing from AI:     0
+New in AI:           0
+======================================================================
+
+✓ Comparison saved: asset_comparison_js_20251124_181949.json
+

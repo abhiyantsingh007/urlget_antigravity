@@ -1,0 +1,194 @@
+Assets
+
+Site:
+
+​
+R
+
+rahul+acme@egalvanic.com
+
+Egalvanic
+DASHBOARDS
+Site Overview
+Arc Flash Readiness
+Equipment Insights
+DATA
+SLDs
+Assets
+Connections
+Locations
+OPERATIONS
+Jobs
+Scheduling
+Site Visits
+Issues
+Attachments
+SALES
+Opportunities
+Accounts
+SETTINGS
+Settings
+Overall Arc Flash Readiness
+
+180 assets • 365 of 852 required fields completed
+
+43%
+Complete
+Create Asset
+Bulk Upload
+SKM Import
+​
+​
+Asset Name
+QR Code
+Condition
+Asset Class
+Building
+Floor
+Room
+Parent Asset
+Actions
+
+CB 175
+
+—
+
+1
+Circuit Breaker
+
+—
+
+—
+
+—
+
+Panelboard 174
+
+CB 178
+
+—
+
+1
+Circuit Breaker
+
+—
+
+—
+
+—
+
+Panelboard 174
+
+Disconnect Switch 176
+
+—
+
+1
+Disconnect Switch
+
+—
+
+—
+
+—
+
+—
+
+DPH
+
+biq-hq-1
+
+1
+Panelboard
+
+Building 1
+
+Floor 1
+
+Room 1
+
+—
+
+DPH-01
+
+—
+
+—
+
+Circuit Breaker
+
+—
+
+—
+
+—
+
+DPH
+
+DPH-02
+
+—
+
+—
+
+Circuit Breaker
+
+—
+
+—
+
+—
+
+DPH
+
+DPH-03
+
+—
+
+—
+
+Circuit Breaker
+
+—
+
+—
+
+—
+
+DPH
+
+DPH-04
+
+—
+
+—
+
+Circuit Breaker
+
+—
+
+—
+
+—
+
+DPH
+
+Rows per page:
+
+100
+
+1–100 of 180
+
+Assistant
+Connected (Session: da05c503)
+Welcome to Maral-AI
+
+Ask me about electrical maintenance, asset information, or preventive maintenance tasks.
+
+Try asking:
+
+"What SLDs are available?"
+"List all asset classes"
+"How many transformers at site ABC?"
+"Show me preventive maintenance tasks for SLD-001"
+➤

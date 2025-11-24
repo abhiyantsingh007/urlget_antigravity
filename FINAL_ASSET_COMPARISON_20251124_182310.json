@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "rnd_total": 16,
+    "ai_total": 16,
+    "difference": 0,
+    "common": 15,
+    "missing_from_ai_count": 1,
+    "new_in_ai_count": 1
+  },
+  "missing_from_ai": [
+    "PH1A8"
+  ],
+  "new_in_ai": [
+    "MDFLB"
+  ],
+  "common_assets": [
+    "CB 175",
+    "CB 178",
+    "DPH",
+    "DPH-01",
+    "DPH-02",
+    "DPH-03",
+    "DPH-04",
+    "Disconnect Switch 176",
+    "MDFLB-MAIN",
+    "MDFLC",
+    "MDFLC-MAIN",
+    "PH151D-ALL GHB",
+    "PH1A10",
+    "PH1A10-MAIN",
+    "Panelboard 174"
+  ],
+  "timestamp": "2025-11-24T18:25:25.097982"
+}

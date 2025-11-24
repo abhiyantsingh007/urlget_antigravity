@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "rnd_total": 8,
+    "ai_total": 8,
+    "difference": 0,
+    "common": 8,
+    "missing_from_ai": 0,
+    "new_in_ai": 0
+  },
+  "missing_from_ai": [],
+  "new_in_ai": [],
+  "common_assets": [
+    "CB 175",
+    "CB 178",
+    "DPH",
+    "DPH-01",
+    "DPH-02",
+    "DPH-03",
+    "DPH-04",
+    "Disconnect Switch 176"
+  ],
+  "timestamp": "2025-11-24T18:21:39.478753"
+}
