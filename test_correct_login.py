@@ -11,7 +11,7 @@ def test_correct_login():
     """Test login with the correct credentials"""
     
     # Configuration with correct credentials
-    BASE_URL = "https://acme.qa.egalvanic.ai"
+    BASE_URL = "https://acme.egalvanic-rnd.com"
     EMAIL = "rahul+acme@egalvanic.com"  # Corrected email
     PASSWORD = "RP@egalvanic123"
     

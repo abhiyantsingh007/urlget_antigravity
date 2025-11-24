@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Migration Comparison Report</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 20px; background: #f5f7fa; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; margin-bottom: 20px; }
+        .summary { background: white; padding: 25px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .stat { background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center; }
+        .stat-number { font-size: 32px; font-weight: bold; margin: 10px 0; }
+        .critical { color: #dc3545; }
+        .major { color: #fd7e14; }
+        .minor { color: #ffc107; }
+        .success { color: #28a745; }
+        .endpoint { background: white; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #ddd; }
+        .endpoint.critical { border-left-color: #dc3545; }
+        .endpoint.major { border-left-color: #fd7e14; }
+        .endpoint.minor { border-left-color: #ffc107; }
+        .difference { background: #f8f9fa; padding: 15px; margin: 10px 0; border-radius: 6px; }
+        .path { font-family: 'Courier New', monospace; color: #495057; font-size: 14px; }
+        .value { padding: 8px; background: #e9ecef; border-radius: 4px; margin: 5px 0; display: inline-block; max-width: 100%; word-break: break-all; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-left: 10px; }
+        .badge.critical { background: #fadbd8; color: #dc3545; }
+        .badge.major { background: #ffe5d0; color: #fd7e14; }
+        .badge.minor { background: #fff3cd; color: #ffc107; }
+        code { background: #e9ecef; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 Smart Migration Comparison Report</h1>
+        <p>Intelligent comparison focusing on business-critical changes</p>
+        <p style="opacity: 0.9; font-size: 14px;">Generated: 2025-11-24T10:04:49.848109</p>
+    </div>
+    
+    <div class="summary">
+        <h2>📊 Summary</h2>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number critical">0</div>
+                <div>Critical Issues</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number major">0</div>
+                <div>Major Differences</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number minor">0</div>
+                <div>Minor Changes</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number success">4</div>
+                <div>Ignored Noise</div>
+            </div>
+        </div>
+        <p><strong>Old:</strong> complete_captures_20251121_201827</p>
+        <p><strong>New:</strong> complete_tab_captures_20251121_202444</p>
+    </div>
+
+</body>
+</html>

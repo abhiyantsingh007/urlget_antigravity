@@ -1,0 +1,154 @@
+{
+  "summary": {
+    "critical": 1,
+    "major": 4,
+    "minor": 13,
+    "total": 18
+  },
+  "comparisons": [
+    {
+      "site": "Site657",
+      "field": "total_assets",
+      "old_value": 1,
+      "new_value": 0,
+      "change": -1,
+      "severity": "CRITICAL"
+    },
+    {
+      "site": "All Facilities",
+      "field": "opportunities_value",
+      "old_value": 485000,
+      "new_value": 334000,
+      "change": -151000,
+      "severity": "MAJOR"
+    },
+    {
+      "site": "All Facilities",
+      "field": "total_assets",
+      "old_value": 2535,
+      "new_value": 1048,
+      "change": -1487,
+      "severity": "MAJOR"
+    },
+    {
+      "site": "All Facilities",
+      "field": "equipment_at_risk",
+      "old_value": 1200000,
+      "new_value": 950000,
+      "change": -250000,
+      "severity": "MAJOR"
+    },
+    {
+      "site": "Super Caremark",
+      "field": "equipment_at_risk",
+      "old_value": 450000,
+      "new_value": 455000,
+      "change": 5000,
+      "severity": "MAJOR"
+    },
+    {
+      "site": "All Facilities",
+      "field": "unresolved_issues",
+      "old_value": 60,
+      "new_value": 45,
+      "change": -15,
+      "severity": "MINOR"
+    },
+    {
+      "site": "All Facilities",
+      "field": "pending_tasks",
+      "old_value": 144,
+      "new_value": 129,
+      "change": -15,
+      "severity": "MINOR"
+    },
+    {
+      "site": "All Facilities",
+      "field": "active_sessions",
+      "old_value": 43,
+      "new_value": 33,
+      "change": -10,
+      "severity": "MINOR"
+    },
+    {
+      "site": "All Facilities",
+      "field": "open_issues",
+      "old_value": 71,
+      "new_value": 57,
+      "change": -14,
+      "severity": "MINOR"
+    },
+    {
+      "site": "All Facilities",
+      "field": "resolved_issues",
+      "old_value": 250,
+      "new_value": 275,
+      "change": 25,
+      "severity": "MINOR"
+    },
+    {
+      "site": "Super Caremark",
+      "field": "resolved_issues",
+      "old_value": 45,
+      "new_value": 47,
+      "change": 2,
+      "severity": "MINOR"
+    },
+    {
+      "site": "Super Caremark",
+      "field": "completed_tasks",
+      "old_value": 12,
+      "new_value": 13,
+      "change": 1,
+      "severity": "MINOR"
+    },
+    {
+      "site": "Super Caremark",
+      "field": "unresolved_issues",
+      "old_value": 8,
+      "new_value": 6,
+      "change": -2,
+      "severity": "MINOR"
+    },
+    {
+      "site": "Super Caremark",
+      "field": "total_assets",
+      "old_value": 179,
+      "new_value": 180,
+      "change": 1,
+      "severity": "MINOR"
+    },
+    {
+      "site": "Super Caremark",
+      "field": "open_issues",
+      "old_value": 12,
+      "new_value": 10,
+      "change": -2,
+      "severity": "MINOR"
+    },
+    {
+      "site": "Super Caremark",
+      "field": "total_sessions",
+      "old_value": 31,
+      "new_value": 33,
+      "change": 2,
+      "severity": "MINOR"
+    },
+    {
+      "site": "Super Caremark",
+      "field": "completed_sessions",
+      "old_value": 28,
+      "new_value": 30,
+      "change": 2,
+      "severity": "MINOR"
+    },
+    {
+      "site": "Super Caremark",
+      "field": "pending_tasks",
+      "old_value": 5,
+      "new_value": 4,
+      "change": -1,
+      "severity": "MINOR"
+    }
+  ]
+}

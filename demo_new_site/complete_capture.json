@@ -1,0 +1,61 @@
+{
+  "api_responses": [
+    {
+      "url": "https://example.com/api/sites/overview",
+      "response": {
+        "timestamp": "2024-01-15T14:30:00Z",
+        "sites": {
+          "Site657": {
+            "name": "Site657",
+            "total_assets": 0,
+            "active_sessions_count": 5,
+            "open_issues_count": 3
+          },
+          "MainFacility": {
+            "name": "MainFacility",
+            "total_assets": 1500,
+            "active_sessions_count": 42,
+            "open_issues_count": 8
+          },
+          "SmallSite": {
+            "name": "SmallSite",
+            "total_assets": 10,
+            "active_sessions_count": 2,
+            "open_issues_count": 1
+          }
+        },
+        "session_id": "new-session-789",
+        "access_token": "eyJhbGci0iJSUzI1NiIsInR5cCI6IkpXVCJ9..."
+      }
+    },
+    {
+      "url": "https://example.com/api/assets/list",
+      "response": {
+        "timestamp": "2024-01-15T14:31:00Z",
+        "assets": [
+          {
+            "id": "asset-001",
+            "name": "Transformer A",
+            "status": "operational",
+            "voltage": 480
+          },
+          {
+            "id": "asset-002",
+            "name": "Panel B",
+            "status": "operational",
+            "voltage": 208
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://example.com/api/user/preferences",
+      "response": {
+        "timestamp": "2024-01-15T14:32:00Z",
+        "user_id": "user-123",
+        "theme": "dark",
+        "notifications_enabled": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "base_url": "https://acme.egalvanic-rnd.com",
+    "capture_time": "2025-11-24T01:19:20.611326",
+    "total_api_responses": 3
+  },
+  "api_responses": [
+    {
+      "url": "https://bqitb0ghqa.execute-api.us-east-2.amazonaws.com/api/sld/sessions?sld_id=",
+      "timestamp": "2025-11-24T01:19:05.033418",
+      "response": {
+        "session_id": "137411ee-88b8-4d00-9842-e9cb7c01a5a2",
+        "sld_id": "",
+        "created_at": "2025-11-23T19:49:03.963620",
+        "message": "Session created for SLD "
+      }
+    },
+    {
+      "url": "https://bqitb0ghqa.execute-api.us-east-2.amazonaws.com/api/sld/sessions?sld_id=",
+      "timestamp": "2025-11-24T01:19:15.178336",
+      "response": {
+        "session_id": "87cd6317-2de8-4c7e-8a6d-0457b5582c45",
+        "sld_id": "",
+        "created_at": "2025-11-23T19:49:13.131053",
+        "message": "Session created for SLD "
+      }
+    },
+    {
+      "url": "https://bqitb0ghqa.execute-api.us-east-2.amazonaws.com/api/sld/sessions?sld_id=",
+      "timestamp": "2025-11-24T01:19:20.611001",
+      "response": {
+        "session_id": "d2a7d1f1-b960-4c88-b6c1-0a4ccdcc001e",
+        "sld_id": "",
+        "created_at": "2025-11-23T19:49:19.918012",
+        "message": "Session created for SLD "
+      }
+    }
+  ]
+}

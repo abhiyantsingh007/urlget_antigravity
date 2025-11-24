@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "generated_at": "2025-11-22T23:34:41.851144",
+    "old_file": "complete_captures_20251121_200510/complete_capture.json",
+    "new_file": "complete_captures_20251121_201827/complete_capture.json"
+  },
+  "statistics": {
+    "total_paths_compared": 81,
+    "differences_found": 23,
+    "critical": 0,
+    "major": 1,
+    "minor": 22,
+    "identical": 31
+  },
+  "differences": [
+    {
+      "path": "api_responses",
+      "type": "list_length_changed",
+      "old_value": "Length: 1",
+      "new_value": "Length: 19",
+      "severity": "MAJOR"
+    },
+    {
+      "path": "api_responses[0].timestamp",
+      "type": "value_changed",
+      "old_value": "1763735745811",
+      "new_value": "1763736540629",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[1]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[2]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[3]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[4]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[5]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[6]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[7]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[8]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[9]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[10]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[11]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[12]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[13]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[14]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[15]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[16]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[17]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "api_responses[18]",
+      "type": "list_element_added",
+      "old_value": null,
+      "new_value": "dict with 5 items",
+      "severity": "MINOR"
+    },
+    {
+      "path": "metadata.capture_timestamp",
+      "type": "value_changed",
+      "old_value": "2025-11-21T20:05:19.520691",
+      "new_value": "2025-11-21T20:18:34.768729",
+      "severity": "MINOR"
+    },
+    {
+      "path": "metadata.output_directory",
+      "type": "value_changed",
+      "old_value": "complete_captures_20251121_200510",
+      "new_value": "complete_captures_20251121_201827",
+      "severity": "MINOR"
+    },
+    {
+      "path": "ui_data.visible_text",
+      "type": "value_changed",
+      "old_value": "Egalvanic\nSign into your account\nEmail Address\u2009*\nPassword\u2009*\nSign In\nForgot your password?",
+      "new_value": "R\nrahul+acme@egalvanic.com\nEgalvanic\nDASHBOARDS\nSite Overview\nArc Flash Readiness\nEquipment Insights...",
+      "severity": "MINOR"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "api_responses": [
+    {
+      "url": "https://example.com/api/dashboard/sites",
+      "response": {
+        "sites": {
+          "Site657": {
+            "name": "Site657",
+            "total_assets": 0,
+            "open_issues": 5,
+            "unresolved_issues": 3,
+            "resolved_issues": 2,
+            "active_sessions": 2,
+            "completed_sessions": 10,
+            "pending_tasks": 3,
+            "completed_tasks": 7,
+            "opportunities_value": 50000,
+            "opportunities_count": 2
+          },
+          "All Facilities": {
+            "name": "All Facilities",
+            "total_assets": 1048,
+            "open_issues": 57,
+            "unresolved_issues": 45,
+            "resolved_issues": 275,
+            "active_sessions": 33,
+            "completed_sessions": 135,
+            "pending_tasks": 129,
+            "completed_tasks": 395,
+            "opportunities_value": 334000,
+            "opportunities_count": 18,
+            "equipment_at_risk": 950000
+          },
+          "London UK": {
+            "name": "London UK",
+            "total_assets": 445,
+            "open_issues": 12,
+            "unresolved_issues": 10,
+            "resolved_issues": 47,
+            "active_sessions": 8,
+            "completed_sessions": 27,
+            "pending_tasks": 15,
+            "completed_tasks": 52,
+            "opportunities_value": 75000,
+            "opportunities_count": 5
+          },
+          "Melbourne AU": {
+            "name": "Melbourne AU",
+            "total_assets": 320,
+            "open_issues": 15,
+            "unresolved_issues": 12,
+            "resolved_issues": 32,
+            "active_sessions": 5,
+            "completed_sessions": 20,
+            "pending_tasks": 8,
+            "completed_tasks": 27
+          },
+          "Toronto Canada": {
+            "name": "Toronto Canada",
+            "total_assets": 275,
+            "open_issues": 8,
+            "unresolved_issues": 6,
+            "resolved_issues": 24,
+            "active_sessions": 3,
+            "completed_sessions": 14,
+            "pending_tasks": 5,
+            "completed_tasks": 20
+          }
+        }
+      }
+    }
+  ]
+}

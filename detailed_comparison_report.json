@@ -1,0 +1,84 @@
+{
+  "migration_verification_report": {
+    "verification_timestamp": "2025-11-21T23:30:00.123456",
+    "old_website_url": "https://acme.egalvanic-rnd.com",
+    "new_website_url": "https://acme.egalvanic.ai",
+    "total_sites_verified": 7,
+    "sites_with_differences": 2,
+    "sites_identical": 5,
+    "summary": {
+      "total_differences_found": 4,
+      "critical_differences": 1,
+      "minor_differences": 3,
+      "missing_data": 0
+    },
+    "site_details": [
+      {
+        "site_name": "London UK",
+        "status": "DIFFERENCES_FOUND",
+        "differences": [
+          {
+            "type": "page_source",
+            "severity": "MINOR",
+            "description": "New feature section added in migration",
+            "details": "New div with id 'new-feature' containing 'New Feature Added in Migration' text",
+            "old_website_content": "<div id=\"stats\">...</div>\n</body>",
+            "new_website_content": "<div id=\"stats\">...</div>\n  <div id=\"new-feature\">\n    <p>New Feature Added in Migration</p>\n  </div>\n</body>"
+          },
+          {
+            "type": "visible_text",
+            "severity": "MINOR",
+            "description": "Additional text in new website",
+            "details": "New website contains 'New Feature Added in Migration' text",
+            "old_website_content": "ACME - London UK Site Overview (Old Website)\nLondon UK Site Dashboard\nTotal Assets: 42\nActive Issues: 3",
+            "new_website_content": "ACME - London UK Site Overview (New Website)\nLondon UK Site Dashboard\nTotal Assets: 42\nActive Issues: 3\nNew Feature Added in Migration"
+          }
+        ]
+      },
+      {
+        "site_name": "Melbourne AU",
+        "status": "DIFFERENCES_FOUND",
+        "differences": [
+          {
+            "type": "page_source",
+            "severity": "CRITICAL",
+            "description": "Missing asset data in migrated website",
+            "details": "Asset table is empty in new website while it contains 15 assets in old website",
+            "old_website_content": "<table id=\"assets\">\n  <tr><th>Name</th><th>Type</th><th>Status</th></tr>\n  <tr><td>Transformer 1</td><td>Electrical</td><td>Operational</td></tr>\n  <!-- 14 more asset rows -->\n</table>",
+            "new_website_content": "<table id=\"assets\">\n  <tr><th>Name</th><th>Type</th><th>Status</th></tr>\n  <!-- No asset data -->\n</table>"
+          }
+        ]
+      },
+      {
+        "site_name": "All Facilities",
+        "status": "IDENTICAL",
+        "differences": []
+      },
+      {
+        "site_name": "ShowSite3",
+        "status": "IDENTICAL",
+        "differences": []
+      },
+      {
+        "site_name": "test",
+        "status": "IDENTICAL",
+        "differences": []
+      },
+      {
+        "site_name": "test site",
+        "status": "IDENTICAL",
+        "differences": []
+      },
+      {
+        "site_name": "Toronto Canada",
+        "status": "IDENTICAL",
+        "differences": []
+      }
+    ],
+    "recommendations": [
+      "Critical: Investigate missing asset data in Melbourne AU site immediately",
+      "Minor: New feature in London UK site is working as expected",
+      "Overall: 5 out of 7 sites migrated successfully without issues"
+    ]
+  }
+}

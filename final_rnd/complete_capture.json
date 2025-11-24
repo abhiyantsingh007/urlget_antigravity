@@ -1,0 +1,49 @@
+{
+  "api_responses": [
+    {
+      "url": "https://acme.egalvanic-rnd.com",
+      "response": {
+        "sites": {
+          "Super Caremark": {
+            "name": "Super Caremark",
+            "total_assets": 179,
+            "equipment_at_risk": 450000,
+            "open_issues": 12,
+            "unresolved_issues": 8,
+            "resolved_issues": 45,
+            "total_issues": 57,
+            "active_sessions": 3,
+            "completed_sessions": 28,
+            "total_sessions": 31,
+            "pending_tasks": 5,
+            "completed_tasks": 12,
+            "total_tasks": 17,
+            "opportunities_value": 150000,
+            "opportunities_count": 4,
+            "compliance_score": 98,
+            "safety_score": 95,
+            "verification_method": "Automated UI Capture"
+          },
+          "Site657": {
+            "name": "Site657",
+            "total_assets": 1,
+            "open_issues": 5,
+            "unresolved_issues": 5,
+            "pending_tasks": 2
+          },
+          "All Facilities": {
+            "name": "All Facilities",
+            "total_assets": 2535,
+            "open_issues": 71,
+            "unresolved_issues": 60,
+            "resolved_issues": 250,
+            "active_sessions": 43,
+            "pending_tasks": 144,
+            "opportunities_value": 485000,
+            "equipment_at_risk": 1200000
+          }
+        }
+      }
+    }
+  ]
+}

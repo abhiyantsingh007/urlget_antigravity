@@ -321,7 +321,7 @@ def compare_data(old_data_dir, new_data_dir):
 
 if __name__ == "__main__":
     # Configuration
-    BASE_URL = "https://acme.qa.egalvanic.ai"
+    BASE_URL = "https://acme.egalvanic.ai"
     EMAIL = "rahul@egalvanic.com"
     PASSWORD = "RP@egalvanic123"
     

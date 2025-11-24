@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "base_url": "https://acme.rnd.egalvanic.com",
+    "capture_time": "2025-11-24T01:26:38.502592",
+    "total_api_responses": 2
+  },
+  "api_responses": [
+    {
+      "url": "https://acme.rnd.egalvanic.com/api/sites/overview",
+      "timestamp": "2025-11-24T01:26:38.502598",
+      "response": {
+        "sites": {
+          "Site657": {
+            "name": "Site657",
+            "total_assets": 1,
+            "active_sites": 1,
+            "pending_tasks": 0
+          },
+          "All Facilities": {
+            "name": "All Facilities",
+            "total_assets": 2535,
+            "active_sites": 42,
+            "pending_tasks": 15
+          },
+          "London UK": {
+            "name": "London UK",
+            "total_assets": 450,
+            "active_sites": 5
+          }
+        }
+      }
+    },
+    {
+      "url": "https://acme.rnd.egalvanic.com/api/dashboard/stats",
+      "timestamp": "2025-11-24T01:26:38.502599",
+      "response": {
+        "total_sites": 42,
+        "total_assets": 2535
+      }
+    }
+  ]
+}

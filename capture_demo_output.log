@@ -1,0 +1,30 @@
+/Users/vishwa/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+╔════════════════════════════════════════════════════════════════╗
+║  COMPREHENSIVE SITE-BY-SITE CAPTURE                           ║
+║  Captures data for EVERY site in the dropdown                 ║
+╚════════════════════════════════════════════════════════════════╝
+    
+
+======================================================================
+STEP 1: CAPTURE OLD WEBSITE
+======================================================================
+
+================================================================================
+COMPREHENSIVE SITE-BY-SITE CAPTURE
+================================================================================
+
+🔐 Logging in to: https://acme.egalvanic-rnd.com
+⏳ Waiting for dashboard...
+
+🔍 Looking for site dropdown...
+⚠️  Could not find site dropdown
+❌ Could not find site dropdown
+
+💡 TIP: The page might be structured differently.
+   Please open the browser (remove --headless) and tell me:
+   1. What element selects the site?
+   2. How to identify it (CSS selector)?
+
+❌ Failed to capture old site

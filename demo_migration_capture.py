@@ -21,7 +21,7 @@ def create_sample_data():
     # Sample API responses that would be captured
     sample_responses = [
         {
-            "url": "https://acme.qa.egalvanic.ai/api/dashboard/stats",
+            "url": "https://acme.egalvanic.ai/api/dashboard/stats",
             "status": 200,
             "response": {
                 "total_sites": 42,
@@ -31,7 +31,7 @@ def create_sample_data():
             }
         },
         {
-            "url": "https://acme.qa.egalvanic.ai/api/sites",
+            "url": "https://acme.egalvanic.ai/api/sites",
             "status": 200,
             "response": {
                 "sites": [
@@ -42,7 +42,7 @@ def create_sample_data():
             }
         },
         {
-            "url": "https://acme.qa.egalvanic.ai/api/profile",
+            "url": "https://acme.egalvanic.ai/api/profile",
             "status": 200,
             "response": {
                 "user_id": 1001,
@@ -81,7 +81,7 @@ def create_sample_data():
     # Create summary
     summary = {
         "capture_timestamp": datetime.now().isoformat(),
-        "base_url": "https://acme.qa.egalvanic.ai",
+        "base_url": "https://acme.egalvanic.ai",
         "pages_captured": pages,
         "api_responses_captured": len(sample_responses),
         "output_directory": output_dir

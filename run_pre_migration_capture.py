@@ -5,7 +5,7 @@ Script to run pre-migration data capture
 from pre_migration_capture import PreMigrationDataCapture
 
 # Configuration - Update with actual credentials
-BASE_URL = "https://acme.qa.egalvanic.ai"
+BASE_URL = "https://acme.egalvanic.ai"
 EMAIL = "rahul+acme@egalvanic.com"
 PASSWORD = "RP@egalvanic123"
 

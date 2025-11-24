@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ULTIMATE MIGRATION VERIFICATION REPORT</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        .header { 
+            background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%); 
+            color: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .summary-box { 
+            background-color: #ffffff; 
+            padding: 25px; 
+            border-radius: 10px; 
+            margin-bottom: 25px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .stats-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 20px; 
+            margin: 25px 0; 
+        }
+        .stat-card { 
+            background: white; 
+            border: 1px solid #e1e8ed; 
+            padding: 20px; 
+            text-align: center; 
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .stat-number { 
+            font-size: 32px; 
+            font-weight: bold; 
+            margin: 10px 0; 
+        }
+        .critical .stat-number { color: #e74c3c; }
+        .major .stat-number { color: #f39c12; }
+        .minor .stat-number { color: #3498db; }
+        .identical .stat-number { color: #27ae60; }
+        .sites .stat-number { color: #9b59b6; }
+        .section { 
+            background-color: #ffffff; 
+            padding: 25px; 
+            border-radius: 10px; 
+            margin-bottom: 25px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .section-title { 
+            color: #2c3e50; 
+            border-bottom: 2px solid #3498db; 
+            padding-bottom: 10px; 
+            margin-top: 0;
+        }
+        .endpoint-report { 
+            border: 1px solid #e1e8ed; 
+            margin: 15px 0; 
+            padding: 20px; 
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .site-report { 
+            border: 1px solid #e1e8ed; 
+            margin: 15px 0; 
+            padding: 20px; 
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .difference { 
+            background-color: #f8f9fa; 
+            padding: 15px; 
+            margin: 12px 0; 
+            border-left: 4px solid #3498db; 
+            border-radius: 4px;
+        }
+        .critical-diff { border-left-color: #e74c3c; }
+        .major-diff { border-left-color: #f39c12; }
+        .minor-diff { border-left-color: #3498db; }
+        .screenshot-analysis { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+            margin: 20px 0;
+        }
+        .screenshot-card { 
+            border: 1px solid #e1e8ed; 
+            border-radius: 8px; 
+            overflow: hidden;
+            background: white;
+        }
+        .screenshot-card img { 
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover;
+        }
+        .screenshot-info { 
+            padding: 15px; 
+        }
+        .screenshot-image-container {
+            margin: 10px 0;
+            text-align: center;
+        }
+        .screenshot-image {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 5px 0;
+        }
+        .severity-badge { 
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .critical-badge { 
+            background-color: #fadbd8; 
+            color: #e74c3c; 
+        }
+        .major-badge { 
+            background-color: #fdebd0; 
+            color: #f39c12; 
+        }
+        .minor-badge { 
+            background-color: #d6eaf8; 
+            color: #3498db; 
+        }
+        .identical-badge { 
+            background-color: #d5f5e3; 
+            color: #27ae60; 
+        }
+        pre { 
+            background-color: #2c3e50; 
+            color: #ecf0f1; 
+            padding: 15px; 
+            border-radius: 6px; 
+            overflow-x: auto;
+            font-size: 13px;
+        }
+        .recommendations li { 
+            margin-bottom: 15px; 
+            padding: 12px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+        }
+        .timestamp { 
+            color: #7f8c8d; 
+            font-size: 14px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ULTIMATE MIGRATION VERIFICATION REPORT</h1>
+        <p>Comprehensive analysis of all API endpoints, site data, and visual elements</p>
+        <div class="timestamp">Generated: 2025-11-22T23:03:00.771566</div>
+    </div>
+    
+    <div class="summary-box">
+        <h2>Executive Summary</h2>
+        <p><strong>Old Capture Directory:</strong> /Users/vishwa/Downloads/urlget/complete_captures_20251121_201827</p>
+        <p><strong>New Capture Directory:</strong> /Users/vishwa/Downloads/urlget/complete_tab_captures_20251121_202444</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card sites">
+                <div class="stat-number">41</div>
+                <div>Sites Analyzed</div>
+            </div>
+            <div class="stat-card critical">
+                <div class="stat-number">7</div>
+                <div>Critical Issues</div>
+            </div>
+            <div class="stat-card major">
+                <div class="stat-number">15</div>
+                <div>Major Differences</div>
+            </div>
+            <div class="stat-card minor">
+                <div class="stat-number">37</div>
+                <div>Minor Differences</div>
+            </div>
+            <div class="stat-card identical">
+                <div class="stat-number">0</div>
+                <div>Identical Endpoints</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Sites Analysis</h2>
+        <div class="site-report">
+            <h3>Site: UPS</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: ATS</h3>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: 8eebf615-f616-4034-ac53-c54144520080</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: ShowSite3</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: {'issue_task': [], 'quote_task': [], 'task_session': [], 'user_task': []}</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference critical-diff">
+                <h4>Removed</h4>
+                <p>Removed detected</p>
+                <p><strong>Values:</strong> Old: {'active_sessions_by_sld': [{'count': 1, 'sld_id': '8eebf615-f616-4034-ac53-c54144520080', 'sld_name': 'ShowSite3'}], 'active_sessions_count': 1, 'asset_breakdown': [{'count': 1, 'node_class_id': '50e | New: None</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: [{'com': 1, 'com_calculation': None, 'core_attributes': [], 'height': 80.0, 'id': '56be3726-1772-41dc-9bf9-3e7793d3914b', 'is_deleted': False, 'label': 'Test 1', 'location': None, 'node_class': '50e38</p>
+            </div>
+            <div class="difference critical-diff">
+                <h4>Removed</h4>
+                <p>Removed detected</p>
+                <p><strong>Values:</strong> Old: True | New: None</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: [{'active': True, 'active_ir_prefix': 'ir_', 'active_visual_prefix': 'visual_', 'date_closed': None, 'date_created': '2025-11-06T12:31:24Z', 'due_date': None, 'est_hours': None, 'id': 'c5b6af84-9f84-4</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: [{'entity_id': '216a6470-f810-413f-953a-0ea0197a97de', 'filename': 'FLIR0725-visual.jpg', 'id': '3086968b-2253-411c-8154-312cb8359ee0', 'is_deleted': True, 'local_filepath': None, 'sld_id': '8eebf615-</p>
+            </div>
+        </div>
+        <div class="site-report">
+            <h3>Site: MCC</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Busway</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: All Facilities</h3>
+            <p><strong>Asset Count:</strong> Old: 2535 | New: 1048</p>
+            <div class="difference major-diff">
+                <h4>Dashboard Value Change</h4>
+                <p>Unresolved Issues: 71 → 57</p>
+                <p><strong>Values:</strong> Old: 71 | New: 57</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Dashboard Value Change</h4>
+                <p>Active Site Visits: 43 → 33</p>
+                <p><strong>Values:</strong> Old: 43 | New: 33</p>
+            </div>
+            <div class="difference major-diff">
+                <h4>Major Asset Difference</h4>
+                <p>Site All Facilities: Total assets changed from 2,535 to 1,048</p>
+                <p><strong>Values:</strong> Old: 2535 | New: 1048</p>
+            </div>
+            <div class="difference major-diff">
+                <h4>Unresolved Issues Difference</h4>
+                <p>Site All Facilities: Unresolved Issues changed from 71 to 57</p>
+                <p><strong>Values:</strong> Old: 71 | New: 57</p>
+            </div>
+        </div>
+        <div class="site-report">
+            <h3>Site: Site657</h3>
+            <p><strong>Asset Count:</strong> Old: 1 | New: 0</p>
+            <div class="difference critical-diff">
+                <h4>Critical Data Loss</h4>
+                <p>Site Site657: Total assets changed from 1 to 0</p>
+                <p><strong>Values:</strong> Old: 1 | New: 0</p>
+            </div>
+        </div>
+        <div class="site-report">
+            <h3>Site: Circuit Breaker</h3>
+            <p><strong>Asset Count:</strong> Old: 3 | New: 3</p>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Switchboard</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: ShowSite3</h3>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: 8eebf615-f616-4034-ac53-c54144520080</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: ShowSite3</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: {'issue_task': [], 'quote_task': [], 'task_session': [], 'user_task': []}</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference critical-diff">
+                <h4>Removed</h4>
+                <p>Removed detected</p>
+                <p><strong>Values:</strong> Old: {'active_sessions_by_sld': [{'count': 1, 'sld_id': '8eebf615-f616-4034-ac53-c54144520080', 'sld_name': 'ShowSite3'}], 'active_sessions_count': 1, 'asset_breakdown': [{'count': 1, 'node_class_id': '50e | New: None</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: [{'com': 1, 'com_calculation': None, 'core_attributes': [], 'height': 80.0, 'id': '56be3726-1772-41dc-9bf9-3e7793d3914b', 'is_deleted': False, 'label': 'Test 1', 'location': None, 'node_class': '50e38</p>
+            </div>
+            <div class="difference critical-diff">
+                <h4>Removed</h4>
+                <p>Removed detected</p>
+                <p><strong>Values:</strong> Old: True | New: None</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: [{'active': True, 'active_ir_prefix': 'ir_', 'active_visual_prefix': 'visual_', 'date_closed': None, 'date_created': '2025-11-06T12:31:24Z', 'due_date': None, 'est_hours': None, 'id': 'c5b6af84-9f84-4</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: [{'entity_id': '216a6470-f810-413f-953a-0ea0197a97de', 'filename': 'FLIR0725-visual.jpg', 'id': '3086968b-2253-411c-8154-312cb8359ee0', 'is_deleted': True, 'local_filepath': None, 'sld_id': '8eebf615-</p>
+            </div>
+        </div>
+        <div class="site-report">
+            <h3>Site: Repair Needed</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Melbourne AU</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Fuse</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Panelboard</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Generator</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: London UK</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Other (OCP)</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: EG-ACME</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: PDU</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Capacitor</h3>
+            <p><strong>Asset Count:</strong> Old: 3 | New: 3</p>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: test site</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Melbourne, AU</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Motor</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Junction Box</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Other</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: egalvanic</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: London, UK</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Toronto Canada</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Relay</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Ultrasonic Anomaly</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Cable</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Thermal Anomaly</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: test</h3>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: 8eebf615-f616-4034-ac53-c54144520080</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: ShowSite3</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: {'issue_task': [], 'quote_task': [], 'task_session': [], 'user_task': []}</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference critical-diff">
+                <h4>Removed</h4>
+                <p>Removed detected</p>
+                <p><strong>Values:</strong> Old: [{'building_name': None, 'com': 1, 'core_attributes': [], 'display_name': 'hghg', 'floor_name': None, 'id': '49859c2a-a9bc-4200-97d9-bf22875ab94d', 'label': 'hghg', 'location': None, 'node_class': '45 | New: None</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: []</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: [{'com': 1, 'com_calculation': None, 'core_attributes': [], 'height': 80.0, 'id': '56be3726-1772-41dc-9bf9-3e7793d3914b', 'is_deleted': False, 'label': 'Test 1', 'location': None, 'node_class': '50e38</p>
+            </div>
+            <div class="difference critical-diff">
+                <h4>Removed</h4>
+                <p>Removed detected</p>
+                <p><strong>Values:</strong> Old: True | New: None</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: [{'active': True, 'active_ir_prefix': 'ir_', 'active_visual_prefix': 'visual_', 'date_closed': None, 'date_created': '2025-11-06T12:31:24Z', 'due_date': None, 'est_hours': None, 'id': 'c5b6af84-9f84-4</p>
+            </div>
+            <div class="difference minor-diff">
+                <h4>Added</h4>
+                <p>Added detected</p>
+                <p><strong>Values:</strong> Old: None | New: [{'entity_id': '216a6470-f810-413f-953a-0ea0197a97de', 'filename': 'FLIR0725-visual.jpg', 'id': '3086968b-2253-411c-8154-312cb8359ee0', 'is_deleted': True, 'local_filepath': None, 'sld_id': '8eebf615-</p>
+            </div>
+        </div>
+        <div class="site-report">
+            <h3>Site: NewNewClass</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Admin</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: NEC Violation</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Transformer</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Utility</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Toronto, Canada</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: OSHA Violation</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: NFPA 70B Violation</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+        <div class="site-report">
+            <h3>Site: Disconnect Switch</h3>
+            <p>No critical issues detected for this site.</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Endpoint Differences Analysis</h2>
+        <p>Deep JSON comparison of all API endpoints with complete structure analysis</p>
+        <h3>Major Endpoint Differences <span class="severity-badge major-badge">REQUIRES REVIEW</span></h3>
+        <div class="endpoint-report">
+            <h3><code>/api/edge_classes/user/96aa4804-5303-450d-bb27-ed33b65e172d</code> <span class="severity-badge major-badge">MAJOR</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://acme.qa.egalvanic.ai/api/edge_classes/user/96aa4804-5303-450d-bb27-ed33b65e172d</code><br>  🔹 New: <code>https://acme.qa.egalvanic.ai/api/edge_classes/user/96aa4804-5303-450d-bb27-ed33b65e172d</code></p>
+                <div class="difference major-diff">
+                    <h4>🚩 Major Value Change: <code>timestamp</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>1763736540680</code><br>  🔸 New: <code>1763736985127</code></p>
+                </div>
+        </div>
+        <div class="endpoint-report">
+            <h3><code>/api/node_classes/user/96aa4804-5303-450d-bb27-ed33b65e172d</code> <span class="severity-badge major-badge">MAJOR</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://acme.qa.egalvanic.ai/api/node_classes/user/96aa4804-5303-450d-bb27-ed33b65e172d</code><br>  🔹 New: <code>https://acme.qa.egalvanic.ai/api/node_classes/user/96aa4804-5303-450d-bb27-ed33b65e172d</code></p>
+                <div class="difference major-diff">
+                    <h4>🚩 Major Value Change: <code>timestamp</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>1763736540680</code><br>  🔸 New: <code>1763736985127</code></p>
+                </div>
+        </div>
+        <div class="endpoint-report">
+            <h3><code>/api/users/96aa4804-5303-450d-bb27-ed33b65e172d/slds</code> <span class="severity-badge major-badge">MAJOR</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://acme.qa.egalvanic.ai/api/users/96aa4804-5303-450d-bb27-ed33b65e172d/slds</code><br>  🔹 New: <code>https://acme.qa.egalvanic.ai/api/users/96aa4804-5303-450d-bb27-ed33b65e172d/slds</code></p>
+                <div class="difference major-diff">
+                    <h4>🚩 Major Value Change: <code>timestamp</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>1763736540675</code><br>  🔸 New: <code>1763736985122</code></p>
+                </div>
+        </div>
+        <div class="endpoint-report">
+            <h3><code>/api/company/alliance-config/acme.egalvanic</code> <span class="severity-badge major-badge">MAJOR</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://eg-pz.qa.egalvanic.ai/api/company/alliance-config/acme.egalvanic</code><br>  🔹 New: <code>https://eg-pz.qa.egalvanic.ai/api/company/alliance-config/acme.egalvanic</code></p>
+                <div class="difference major-diff">
+                    <h4>🚩 Major Value Change: <code>timestamp</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>1763736540629</code><br>  🔸 New: <code>1763736985069</code></p>
+                </div>
+        </div>
+        <div class="endpoint-report">
+            <h3><code>/api/auth/me</code> <span class="severity-badge major-badge">MAJOR</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://acme.qa.egalvanic.ai/api/auth/me</code><br>  🔹 New: <code>https://acme.qa.egalvanic.ai/api/auth/me</code></p>
+                <div class="difference major-diff">
+                    <h4>🚩 Major Value Change: <code>timestamp</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>1763736540647</code><br>  🔸 New: <code>1763736985089</code></p>
+                </div>
+        </div>
+        <div class="endpoint-report">
+            <h3><code>/api/issue_classes/user/96aa4804-5303-450d-bb27-ed33b65e172d</code> <span class="severity-badge major-badge">MAJOR</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://acme.qa.egalvanic.ai/api/issue_classes/user/96aa4804-5303-450d-bb27-ed33b65e172d</code><br>  🔹 New: <code>https://acme.qa.egalvanic.ai/api/issue_classes/user/96aa4804-5303-450d-bb27-ed33b65e172d</code></p>
+                <div class="difference major-diff">
+                    <h4>🚩 Major Value Change: <code>timestamp</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>1763736540664</code><br>  🔸 New: <code>1763736985116</code></p>
+                </div>
+        </div>
+        <div class="endpoint-report">
+            <h3><code>/api/lookup/nodes/8eebf615-f616-4034-ac53-c54144520080</code> <span class="severity-badge major-badge">MAJOR</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://acme.qa.egalvanic.ai/api/lookup/nodes/8eebf615-f616-4034-ac53-c54144520080</code><br>  🔹 New: <code>https://acme.qa.egalvanic.ai/api/lookup/nodes/8eebf615-f616-4034-ac53-c54144520080</code></p>
+                <div class="difference major-diff">
+                    <h4>🚩 Major Value Change: <code>timestamp</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>1763736540664</code><br>  🔸 New: <code>1763736985119</code></p>
+                </div>
+        </div>
+        <div class="endpoint-report">
+            <h3><code>/api/auth/refresh</code> <span class="severity-badge major-badge">MAJOR</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://acme.qa.egalvanic.ai/api/auth/refresh</code><br>  🔹 New: <code>https://acme.qa.egalvanic.ai/api/auth/refresh</code></p>
+                <div class="difference major-diff">
+                    <h4>🚩 Major Value Change: <code>timestamp</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>1763736540664</code><br>  🔸 New: <code>1763736985106</code></p>
+                </div>
+                <div class="difference minor-diff">
+                    <h4>🔄 Value Changed: <code>response.access_token</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>eyJraWQiOiJsMXFIY3lVWk9CQU9DYTRQeWZEdzZzamZ6c1ZWYXlodXdGWnFJZUR2NkhVPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI5NmFhNDgwNC01MzAzLTQ1MGQtYmIyNy1lZDMzYjY1ZTE3MmQiLCJldmVudF9pZCI6IjYwMGE4MjNmLTkwZjItNGRmOC1hMzBm</code><br>  🔸 New: <code>eyJraWQiOiJsMXFIY3lVWk9CQU9DYTRQeWZEdzZzamZ6c1ZWYXlodXdGWnFJZUR2NkhVPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI5NmFhNDgwNC01MzAzLTQ1MGQtYmIyNy1lZDMzYjY1ZTE3MmQiLCJldmVudF9pZCI6ImVhOThjMDUyLTExNGItNDVmMS1hMzVk</code></p>
+                </div>
+                <div class="difference minor-diff">
+                    <h4>🔄 Value Changed: <code>response.id_token</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>eyJraWQiOiJIT2llRG9rUU40TlVCV2w4aHdtbG1vZE5CY3I4aHVyczRcLzFiYkc5UFwvcVk9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI5NmFhNDgwNC01MzAzLTQ1MGQtYmIyNy1lZDMzYjY1ZTE3MmQiLCJhdWQiOiJkYTRudXU1ODkxbm82aG5pcGlvbWoydjlhI</code><br>  🔸 New: <code>eyJraWQiOiJIT2llRG9rUU40TlVCV2w4aHdtbG1vZE5CY3I4aHVyczRcLzFiYkc5UFwvcVk9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI5NmFhNDgwNC01MzAzLTQ1MGQtYmIyNy1lZDMzYjY1ZTE3MmQiLCJhdWQiOiJkYTRudXU1ODkxbm82aG5pcGlvbWoydjlhI</code></p>
+                </div>
+        </div>
+        <div class="endpoint-report">
+            <h3><code>/api/lookup/site-overview/8eebf615-f616-4034-ac53-c54144520080</code> <span class="severity-badge major-badge">MAJOR</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://acme.qa.egalvanic.ai/api/lookup/site-overview/8eebf615-f616-4034-ac53-c54144520080?company_id=d59d449b-09d8-45d6-8f0a-ef70024b1293</code><br>  🔹 New: <code>https://acme.qa.egalvanic.ai/api/lookup/site-overview/8eebf615-f616-4034-ac53-c54144520080?company_id=d59d449b-09d8-45d6-8f0a-ef70024b1293</code></p>
+                <div class="difference major-diff">
+                    <h4>🚩 Major Value Change: <code>timestamp</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>1763736540663</code><br>  🔸 New: <code>1763736985110</code></p>
+                </div>
+        </div>
+        <div class="endpoint-report">
+            <h3><code>/api/sld/sessions</code> <span class="severity-badge major-badge">MAJOR</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://bqitb0ghqa.execute-api.us-east-2.amazonaws.com/api/sld/sessions?sld_id=8eebf615-f616-4034-ac53-c54144520080</code><br>  🔹 New: <code>https://bqitb0ghqa.execute-api.us-east-2.amazonaws.com/api/sld/sessions?sld_id=8eebf615-f616-4034-ac53-c54144520080</code></p>
+                <div class="difference major-diff">
+                    <h4>🚩 Major Value Change: <code>timestamp</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>1763736540668</code><br>  🔸 New: <code>1763736985111</code></p>
+                </div>
+                <div class="difference minor-diff">
+                    <h4>🔄 Value Changed: <code>response.created_at</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>2025-11-21T14:45:40.250752</code><br>  🔸 New: <code>2025-11-21T14:53:04.009975</code></p>
+                </div>
+                <div class="difference minor-diff">
+                    <h4>🔄 Value Changed: <code>response.session_id</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>a2a45b2a-2ce8-4710-a569-cd15444744b2</code><br>  🔸 New: <code>56653180-3de9-4097-a15f-47539c47b272</code></p>
+                </div>
+        </div>
+        <div class="endpoint-report">
+            <h3><code>/api/sld/8eebf615-f616-4034-ac53-c54144520080</code> <span class="severity-badge major-badge">MAJOR</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://acme.qa.egalvanic.ai/api/sld/8eebf615-f616-4034-ac53-c54144520080</code><br>  🔹 New: <code>https://acme.qa.egalvanic.ai/api/sld/8eebf615-f616-4034-ac53-c54144520080</code></p>
+                <div class="difference major-diff">
+                    <h4>🚩 Major Value Change: <code>timestamp</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>1763736540670</code><br>  🔸 New: <code>1763736985107</code></p>
+                </div>
+        </div>
+        <div class="endpoint-report">
+            <h3><code>/api/users/96aa4804-5303-450d-bb27-ed33b65e172d/roles</code> <span class="severity-badge major-badge">MAJOR</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://acme.qa.egalvanic.ai/api/users/96aa4804-5303-450d-bb27-ed33b65e172d/roles</code><br>  🔹 New: <code>https://acme.qa.egalvanic.ai/api/users/96aa4804-5303-450d-bb27-ed33b65e172d/roles</code></p>
+                <div class="difference major-diff">
+                    <h4>🚩 Major Value Change: <code>timestamp</code></h4>
+                    <p><strong>Values:</strong><br>  🔸 Old: <code>1763736540652</code><br>  🔸 New: <code>1763736985093</code></p>
+                </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Screenshot Analysis</h2>
+        <p>Visual comparison of user interface elements across migration</p>
+        <div class="screenshot-analysis">
+            <div class="screenshot-card">
+                <h4>screenshot_6_settings.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_6_settings.png" alt="New screenshot_6_settings.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_5_reports.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_5_reports.png" alt="New screenshot_5_reports.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_5_reports_click_1.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_5_reports_click_1.png" alt="New screenshot_5_reports_click_1.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_6_settings_click_1.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_6_settings_click_1.png" alt="New screenshot_6_settings_click_1.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_2_sites.png</h4>
+                <p><strong>Status:</strong> VISUAL_DIFFERENCES_DETECTED</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>Old Website:</strong></p><img src="complete_captures_20251121_201827/screenshot_2_sites.png" alt="Old screenshot_2_sites.png" class="screenshot-image"></div><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_2_sites.png" alt="New screenshot_2_sites.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_2_sites_click_1.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_2_sites_click_1.png" alt="New screenshot_2_sites_click_1.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_3_assets.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_3_assets.png" alt="New screenshot_3_assets.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_3_assets_click_1.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_3_assets_click_1.png" alt="New screenshot_3_assets_click_1.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_1_dashboard.png</h4>
+                <p><strong>Status:</strong> VISUAL_DIFFERENCES_DETECTED</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>Old Website:</strong></p><img src="complete_captures_20251121_201827/screenshot_1_dashboard.png" alt="Old screenshot_1_dashboard.png" class="screenshot-image"></div><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_1_dashboard.png" alt="New screenshot_1_dashboard.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_7_profile_click_1.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_7_profile_click_1.png" alt="New screenshot_7_profile_click_1.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_7_profile.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_7_profile.png" alt="New screenshot_7_profile.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_1_dashboard_click_2.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_1_dashboard_click_2.png" alt="New screenshot_1_dashboard_click_2.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_4_issues.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_4_issues.png" alt="New screenshot_4_issues.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_3_profile.png</h4>
+                <p><strong>Status:</strong> OLD_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>Old Website:</strong></p><img src="complete_captures_20251121_201827/screenshot_3_profile.png" alt="Old screenshot_3_profile.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_4_issues_click_2.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_4_issues_click_2.png" alt="New screenshot_4_issues_click_2.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_1_dashboard_click_1.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_1_dashboard_click_1.png" alt="New screenshot_1_dashboard_click_1.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_4_issues_click_1.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_4_issues_click_1.png" alt="New screenshot_4_issues_click_1.png" class="screenshot-image"></div>
+            </div>
+            <div class="screenshot-card">
+                <h4>screenshot_3_assets_click_2.png</h4>
+                <p><strong>Status:</strong> NEW_ONLY</p>
+                <p><strong>Severity:</strong> MINOR</p><div class="screenshot-image-container"><p><strong>New Website:</strong></p><img src="complete_tab_captures_20251121_202444/screenshot_3_assets_click_2.png" alt="New screenshot_3_assets_click_2.png" class="screenshot-image"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Recommendations</h2>
+        <ol class="recommendations">
+            <li><strong style="color: #e74c3c;">🔴 CRITICAL ACTION REQUIRED:</strong> Investigate 7 critical issues immediately
+                <br><strong>Action:</strong> Check data migration process for endpoints with critical data loss</li>
+            <li><strong style="color: #f39c12;">🟡 MAJOR REVIEW RECOMMENDED:</strong> Review 15 major differences
+                <br><strong>Action:</strong> Verify that major changes are intentional and document them</li>
+            <li><strong style="color: #3498db;">🔵 MINOR MONITORING:</strong> Monitor 37 minor differences
+                <br><strong>Action:</strong> Track minor changes for ongoing verification</li>
+        </ol>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Verification Methodology</h2>
+        <ul>
+            <li><strong>Complete JSON Analysis:</strong> Deep recursive comparison of all API responses (8000+ lines per file)</li>
+            <li><strong>Site-by-Site Analysis:</strong> Individual verification of all facility sites</li>
+            <li><strong>Critical Issue Detection:</strong> Special algorithms to identify data loss patterns</li>
+            <li><strong>Severity Classification:</strong> Automatic categorization by business impact</li>
+            <li><strong>Visual Verification:</strong> Screenshot comparison for UI consistency</li>
+            <li><strong>Comprehensive Reporting:</strong> Detailed visualization of all discrepancies</li>
+        </ul>
+    </div>
+    
+    <div class="summary-box">
+        <h3>About This Report</h3>
+        <p>This ultimate migration verification report provides a complete analysis of the website migration process,
+        comparing over 8,000 lines of JSON data per capture file across all sites and endpoints.</p>
+        
+        <h4>Key Issues Detected:</h4>
+        <ul>
+            <li><strong>Site657 Critical Data Loss:</strong> Asset count 1 → 0 (Critical)</li>
+            <li><strong>All Facilities Major Difference:</strong> Asset count 2,535 → 1,048 (Major)</li>
+            <li><strong>All Facilities Unresolved Issues:</strong> Count 71 → 57 (Major)</li>
+            <li><strong>Complete JSON Structure Comparison:</strong> All fields analyzed</li>
+            <li><strong>Visual Screenshot Analysis:</strong> UI consistency verification</li>
+        </ul>
+    </div>
+</body>
+</html>

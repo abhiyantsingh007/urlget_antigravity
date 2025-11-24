@@ -1,0 +1,64 @@
+Site:
+R
+rahul+acme@egalvanic.com
+Egalvanic
+DASHBOARDS
+Site Overview
+Arc Flash Readiness
+Equipment Insights
+DATA
+SLDs
+Assets
+Connections
+Locations
+OPERATIONS
+Jobs
+Scheduling
+Site Visits
+Issues
+Attachments
+SALES
+Opportunities
+Accounts
+SETTINGS
+Settings
+Overall Arc Flash Readiness
+180 assets • 365 of 852 required fields completed
+43%
+Complete
+Create Asset
+Bulk Upload
+SKM Import
+Asset Name
+QR Code
+Condition
+Asset Class
+Building
+CB 175
+—
+1
+Circuit Breaker
+—
+CB 178
+—
+1
+Circuit Breaker
+—
+Disconnect Switch 176
+—
+1
+Disconnect Switch
+—
+DPH
+biq-hq-1
+1
+Panelboard
+Building 1
+DPH-01
+—
+—
+Circuit Breaker
+—
+Rows per page:
+25
+1–25 of 180

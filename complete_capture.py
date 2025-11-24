@@ -15,7 +15,7 @@ def capture_complete_data():
     """Capture complete data from the ACME website using Selenium"""
     
     # Configuration with correct credentials
-    BASE_URL = "https://acme.qa.egalvanic.ai"
+    BASE_URL = "https://acme.egalvanic-rnd.com"
     EMAIL = "rahul+acme@egalvanic.com"  # Corrected email
     PASSWORD = "RP@egalvanic123"
     

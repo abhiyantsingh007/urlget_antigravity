@@ -1,0 +1,18 @@
+{
+  "url": "https://acme.egalvanic.ai/api/assets",
+  "status": 200,
+  "mimeType": "application/json",
+  "timestamp": 1700643710789,
+  "response": {
+    "assets": [
+      {
+        "id": 201,
+        "name": "HVAC System",
+        "type": "Mechanical",
+        "status": "Operational",
+        "location": "Central Plant"
+      }
+    ]
+  },
+  "site": "All Facilities"
+}

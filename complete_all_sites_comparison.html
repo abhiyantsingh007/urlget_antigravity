@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complete All Sites Comparison Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f7fa;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 36px;
+        }
+        .summary {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .stat {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 42px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .stat-label {
+            color: #6c757d;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .critical { color: #dc3545; }
+        .major { color: #fd7e14; }
+        .minor { color: #ffc107; }
+        .success { color: #28a745; }
+        .info { color: #0dcaf0; }
+
+        .site-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .site-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #f8f9fa;
+        }
+        .site-header h2 {
+            margin: 0;
+            flex: 1;
+        }
+        .site-status {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .status-critical {
+            background: #fadbd8;
+            color: #dc3545;
+        }
+        .status-major {
+            background: #ffe5d0;
+            color: #fd7e14;
+        }
+        .status-positive {
+            background: #d1f2eb;
+            color: #28a745;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+        th, td {
+            padding: 15px 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 14px;
+        }
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+        tr:hover {
+            background: #f8f9fa;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .badge-critical {
+            background: #fadbd8;
+            color: #dc3545;
+        }
+        .badge-major {
+            background: #ffe5d0;
+            color: #fd7e14;
+        }
+        .badge-minor {
+            background: #fff3cd;
+            color: #ffc107;
+        }
+        code {
+            background: #e9ecef;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-family: 'Courier New', monospace;
+        }
+        .change-positive {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .change-negative {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .site-count {
+            background: #e7f3ff;
+            padding: 15px;
+            border-left: 4px solid #0dcaf0;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .no-data-sites {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .sites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .site-item {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌐 Complete All Sites Comparison Report</h1>
+        <p style="font-size: 18px; margin: 10px 0;">Comprehensive comparison between RND and AI environments</p>
+        <p style="opacity: 0.9; font-size: 14px; margin: 5px 0;">
+            RND: https://acme.egalvanic-rnd.com &nbsp;|&nbsp; AI: https://acme.egalvanic.ai
+        </p>
+        <p style="opacity: 0.9; font-size: 14px;">Generated: 2025-11-24 15:45:00</p>
+    </div>
+
+    <div class="summary">
+        <h2>📊 Overall Summary</h2>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number info">18</div>
+                <div class="stat-label">Total Sites Found</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Sites Compared</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number critical">1</div>
+                <div class="stat-label">Critical Issues</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number major">4</div>
+                <div class="stat-label">Major Differences</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number minor">13</div>
+                <div class="stat-label">Minor Differences</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">18</div>
+                <div class="stat-label">Total Differences</div>
+            </div>
+        </div>
+
+        <div class="site-count">
+            <strong>📋 Sites Discovered:</strong> The AI website contains <strong>18 sites total</strong>.
+            Detailed comparison data is available for <strong>3 sites</strong> (Site657, All Facilities, Super Caremark).
+        </div>
+    </div>
+
+    <!-- SITE 1: Site657 -->
+    <div class="site-section">
+        <div class="site-header">
+            <h2>🔴 Site 1: Site657</h2>
+            <span class="site-status status-critical">CRITICAL ISSUE</span>
+        </div>
+
+        <p><strong>Total Differences:</strong> 1 (Critical)</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Field</th>
+                    <th>RND Value</th>
+                    <th>AI Value</th>
+                    <th>Change</th>
+                    <th>Severity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1</strong></td>
+                    <td><code>total_assets</code></td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td class="change-negative">-1</td>
+                    <td><span class="badge badge-critical">CRITICAL</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="background: #fadbd8; padding: 15px; border-radius: 5px; margin-top: 15px;">
+            <strong>⚠️ Critical Issue:</strong> Site657 has lost its only asset during migration. This requires immediate investigation.
+        </div>
+    </div>
+
+    <!-- SITE 2: All Facilities -->
+    <div class="site-section">
+        <div class="site-header">
+            <h2>🟠 Site 2: All Facilities</h2>
+            <span class="site-status status-major">MAJOR ISSUES</span>
+        </div>
+
+        <p><strong>Total Differences:</strong> 9 (3 Major + 5 Minor + 1 Improvement)</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Field</th>
+                    <th>RND Value</th>
+                    <th>AI Value</th>
+                    <th>Change</th>
+                    <th>Severity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>2</strong></td>
+                    <td><code>opportunities_value</code></td>
+                    <td>$485,000</td>
+                    <td>$334,000</td>
+                    <td class="change-negative">-$151,000</td>
+                    <td><span class="badge badge-major">MAJOR</span></td>
+                </tr>
+                <tr>
+                    <td><strong>3</strong></td>
+                    <td><code>total_assets</code></td>
+                    <td>2,535</td>
+                    <td>1,048</td>
+                    <td class="change-negative">-1,487</td>
+                    <td><span class="badge badge-major">MAJOR</span></td>
+                </tr>
+                <tr>
+                    <td><strong>4</strong></td>
+                    <td><code>equipment_at_risk</code></td>
+                    <td>$1,200,000</td>
+                    <td>$950,000</td>
+                    <td class="change-negative">-$250,000</td>
+                    <td><span class="badge badge-major">MAJOR</span></td>
+                </tr>
+                <tr>
+                    <td><strong>5</strong></td>
+                    <td><code>unresolved_issues</code></td>
+                    <td>60</td>
+                    <td>45</td>
+                    <td class="change-negative">-15</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr>
+                    <td><strong>6</strong></td>
+                    <td><code>pending_tasks</code></td>
+                    <td>144</td>
+                    <td>129</td>
+                    <td class="change-negative">-15</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr>
+                    <td><strong>7</strong></td>
+                    <td><code>active_sessions</code></td>
+                    <td>43</td>
+                    <td>33</td>
+                    <td class="change-negative">-10</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr>
+                    <td><strong>8</strong></td>
+                    <td><code>open_issues</code></td>
+                    <td>71</td>
+                    <td>57</td>
+                    <td class="change-negative">-14</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>9</strong></td>
+                    <td><code>resolved_issues</code></td>
+                    <td>250</td>
+                    <td>275</td>
+                    <td class="change-positive">+25 ✅</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="background: #ffe5d0; padding: 15px; border-radius: 5px; margin-top: 15px;">
+            <strong>🟠 Major Concerns:</strong>
+            <ul style="margin: 10px 0;">
+                <li>Lost <strong>1,487 assets</strong> (2,535 → 1,048)</li>
+                <li>Opportunities value decreased by <strong>$151,000</strong></li>
+                <li>Equipment at risk decreased by <strong>$250,000</strong></li>
+            </ul>
+            <strong style="color: #28a745;">✅ Positive:</strong> +25 resolved issues
+        </div>
+    </div>
+
+    <!-- SITE 3: Super Caremark -->
+    <div class="site-section">
+        <div class="site-header">
+            <h2>🟢 Site 3: Super Caremark</h2>
+            <span class="site-status status-positive">MOSTLY POSITIVE</span>
+        </div>
+
+        <p><strong>Total Differences:</strong> 8 (1 Major + 7 Minor, mostly improvements)</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Field</th>
+                    <th>RND Value</th>
+                    <th>AI Value</th>
+                    <th>Change</th>
+                    <th>Severity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>10</strong></td>
+                    <td><code>equipment_at_risk</code></td>
+                    <td>$450,000</td>
+                    <td>$455,000</td>
+                    <td class="change-positive">+$5,000</td>
+                    <td><span class="badge badge-major">MAJOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>11</strong></td>
+                    <td><code>resolved_issues</code></td>
+                    <td>45</td>
+                    <td>47</td>
+                    <td class="change-positive">+2 ✅</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>12</strong></td>
+                    <td><code>completed_tasks</code></td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td class="change-positive">+1 ✅</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>13</strong></td>
+                    <td><code>unresolved_issues</code></td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td class="change-positive">-2 ✅</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>14</strong></td>
+                    <td><code>total_assets</code></td>
+                    <td>179</td>
+                    <td>180</td>
+                    <td class="change-positive">+1 ✅</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>15</strong></td>
+                    <td><code>open_issues</code></td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td class="change-positive">-2 ✅</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>16</strong></td>
+                    <td><code>total_sessions</code></td>
+                    <td>31</td>
+                    <td>33</td>
+                    <td class="change-positive">+2 ✅</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>17</strong></td>
+                    <td><code>completed_sessions</code></td>
+                    <td>28</td>
+                    <td>30</td>
+                    <td class="change-positive">+2 ✅</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+                <tr style="background: #d1f2eb;">
+                    <td><strong>18</strong></td>
+                    <td><code>pending_tasks</code></td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td class="change-positive">-1 ✅</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="background: #d1f2eb; padding: 15px; border-radius: 5px; margin-top: 15px;">
+            <strong style="color: #28a745;">✅ Excellent Progress:</strong>
+            <ul style="margin: 10px 0;">
+                <li>Added 1 new asset (179 → 180)</li>
+                <li>Resolved 2 more issues</li>
+                <li>Completed 1 more task</li>
+                <li>Reduced unresolved issues by 2</li>
+                <li>Reduced open issues by 2</li>
+                <li>Increased total sessions by 2</li>
+                <li>Increased completed sessions by 2</li>
+                <li>Reduced pending tasks by 1</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sites without comparison data -->
+    <div class="site-section">
+        <div class="site-header">
+            <h2>📋 Remaining Sites (No Comparison Data)</h2>
+        </div>
+
+        <div class="no-data-sites">
+            <p><strong>⚠️ Note:</strong> The following <strong>15 sites</strong> were discovered on the AI website but do not have captured metrics for comparison with RND:</p>
+
+            <div class="sites-grid">
+                <div class="site-item">4. BCES Test Site - Aiden</div>
+                <div class="site-item">5. EHE NEW TS</div>
+                <div class="site-item">6. EHE NTS 2</div>
+                <div class="site-item">7. EHE SKM TEST</div>
+                <div class="site-item">8. Johnston Boiler-Ferrysburg</div>
+                <div class="site-item">9. M Electric - Jacksonville HQ</div>
+                <div class="site-item">10. MC Testing</div>
+                <div class="site-item">11. SAMPLE SITE 102925</div>
+                <div class="site-item">12. Saveland Avenue Lofts</div>
+                <div class="site-item">13. site_38917</div>
+                <div class="site-item">14. site658</div>
+                <div class="site-item">15. site688</div>
+                <div class="site-item">16. SKM - Champlin Dry Run</div>
+                <div class="site-item">17. test site -89</div>
+                <div class="site-item">18. Test site R</div>
+                <div class="site-item">19. TS3</div>
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Reason:</strong> These sites either don't exist on the RND website, or dashboard metrics were not successfully captured during the comparison process.</p>
+        </div>
+    </div>
+
+    <!-- Summary Table -->
+    <div class="site-section">
+        <h2>📈 Summary by Severity</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Severity</th>
+                    <th>Count</th>
+                    <th>Description</th>
+                    <th>Examples</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="badge badge-critical">CRITICAL</span></td>
+                    <td><strong>1</strong></td>
+                    <td>Data loss or missing critical information</td>
+                    <td>Site657: Lost 1 asset</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-major">MAJOR</span></td>
+                    <td><strong>4</strong></td>
+                    <td>Significant changes in metrics or financial data</td>
+                    <td>All Facilities: -1,487 assets, -$151K opportunities</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                    <td><strong>13</strong></td>
+                    <td>Small changes in metrics (mostly improvements)</td>
+                    <td>Super Caremark: +1 asset, +2 resolved issues</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="text-align: center; padding: 30px; color: #6c757d; font-size: 13px; border-top: 2px solid #dee2e6; margin-top: 30px;">
+        <p><strong>Report Information</strong></p>
+        <p>This comprehensive comparison report shows ALL differences found between RND and AI environments.</p>
+        <p>Data Source: site_comparison_report.json | Sites Captured: 3/18 | Total Differences: 18</p>
+        <p style="margin-top: 15px;">
+            For questions or to capture additional sites, please run the migration verification scripts.<br>
+            Generated by ACME Website Migration Verification Tool
+        </p>
+    </div>
+</body>
+</html>

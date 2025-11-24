@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Site Data Comparison Report</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background: #f5f7fa; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; margin-bottom: 20px; }
+        .summary { background: white; padding: 25px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .stat { background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center; }
+        .stat-number { font-size: 32px; font-weight: bold; margin: 10px 0; }
+        .critical { color: #dc3545; }
+        .major { color: #fd7e14; }
+        .minor { color: #ffc107; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #dee2e6; }
+        th { background: #f8f9fa; font-weight: 600; text-transform: uppercase; font-size: 12px; }
+        tr:hover { background: #f8f9fa; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; }
+        .badge-critical { background: #fadbd8; color: #dc3545; }
+        .badge-major { background: #ffe5d0; color: #fd7e14; }
+        .badge-minor { background: #fff3cd; color: #ffc107; }
+        .positive { color: #28a745; }
+        .negative { color: #dc3545; }
+        code { background: #e9ecef; padding: 2px 6px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏢 Site Data Comparison Report</h1>
+        <p>Site-by-site metric comparison between old and new environments</p>
+        <p style="opacity: 0.9; font-size: 14px;">Generated: 2025-11-24T13:37:23.116627</p>
+    </div>
+    
+    <div class="summary">
+        <h2>📊 Summary</h2>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number critical">1</div>
+                <div>Critical Issues</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number major">4</div>
+                <div>Major Differences</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number minor">13</div>
+                <div>Minor Changes</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">18</div>
+                <div>Total Differences</div>
+            </div>
+        </div>
+        <p><strong>Old:</strong> final_rnd</p>
+        <p><strong>New:</strong> final_ai</p>
+    </div>
+    
+    <div class="summary">
+        <h2>📋 Site Comparison Results</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Site Name</th>
+                    <th>Field</th>
+                    <th>Old Value</th>
+                    <th>New Value</th>
+                    <th>Change</th>
+                    <th>Severity</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td><strong>Site657</strong></td>
+                    <td><code>total_assets</code></td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td class="negative">-1</td>
+                    <td><span class="badge badge-critical">CRITICAL</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>All Facilities</strong></td>
+                    <td><code>opportunities_value</code></td>
+                    <td>485,000</td>
+                    <td>334,000</td>
+                    <td class="negative">-151,000</td>
+                    <td><span class="badge badge-major">MAJOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>All Facilities</strong></td>
+                    <td><code>total_assets</code></td>
+                    <td>2,535</td>
+                    <td>1,048</td>
+                    <td class="negative">-1,487</td>
+                    <td><span class="badge badge-major">MAJOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>All Facilities</strong></td>
+                    <td><code>equipment_at_risk</code></td>
+                    <td>1,200,000</td>
+                    <td>950,000</td>
+                    <td class="negative">-250,000</td>
+                    <td><span class="badge badge-major">MAJOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>Super Caremark</strong></td>
+                    <td><code>equipment_at_risk</code></td>
+                    <td>450,000</td>
+                    <td>455,000</td>
+                    <td class="positive">+5,000</td>
+                    <td><span class="badge badge-major">MAJOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>All Facilities</strong></td>
+                    <td><code>unresolved_issues</code></td>
+                    <td>60</td>
+                    <td>45</td>
+                    <td class="negative">-15</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>All Facilities</strong></td>
+                    <td><code>pending_tasks</code></td>
+                    <td>144</td>
+                    <td>129</td>
+                    <td class="negative">-15</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>All Facilities</strong></td>
+                    <td><code>active_sessions</code></td>
+                    <td>43</td>
+                    <td>33</td>
+                    <td class="negative">-10</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>All Facilities</strong></td>
+                    <td><code>open_issues</code></td>
+                    <td>71</td>
+                    <td>57</td>
+                    <td class="negative">-14</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>All Facilities</strong></td>
+                    <td><code>resolved_issues</code></td>
+                    <td>250</td>
+                    <td>275</td>
+                    <td class="positive">+25</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>Super Caremark</strong></td>
+                    <td><code>resolved_issues</code></td>
+                    <td>45</td>
+                    <td>47</td>
+                    <td class="positive">+2</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>Super Caremark</strong></td>
+                    <td><code>completed_tasks</code></td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td class="positive">+1</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>Super Caremark</strong></td>
+                    <td><code>unresolved_issues</code></td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td class="negative">-2</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>Super Caremark</strong></td>
+                    <td><code>total_assets</code></td>
+                    <td>179</td>
+                    <td>180</td>
+                    <td class="positive">+1</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>Super Caremark</strong></td>
+                    <td><code>open_issues</code></td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td class="negative">-2</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>Super Caremark</strong></td>
+                    <td><code>total_sessions</code></td>
+                    <td>31</td>
+                    <td>33</td>
+                    <td class="positive">+2</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>Super Caremark</strong></td>
+                    <td><code>completed_sessions</code></td>
+                    <td>28</td>
+                    <td>30</td>
+                    <td class="positive">+2</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong>Super Caremark</strong></td>
+                    <td><code>pending_tasks</code></td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td class="negative">-1</td>
+                    <td><span class="badge badge-minor">MINOR</span></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

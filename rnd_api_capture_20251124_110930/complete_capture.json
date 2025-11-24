@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "capture_time": "2025-11-24T11:09:30.153941",
+    "base_url": "https://acme.egalvanic-rnd.com",
+    "total_sites": 0,
+    "total_api_responses": 0
+  },
+  "api_responses": [
+    {
+      "url": "https://acme.egalvanic-rnd.com",
+      "response": {
+        "sites": {}
+      }
+    }
+  ],
+  "raw_api_responses": []
+}

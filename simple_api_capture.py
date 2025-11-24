@@ -15,7 +15,7 @@ def capture_api_responses():
     """Capture all API responses from the ACME website"""
     
     # Configuration
-    BASE_URL = "https://acme.qa.egalvanic.ai"
+    BASE_URL = "https://acme.egalvanic-rnd.com"
     EMAIL = "rahul@egalvanic.com"
     PASSWORD = "RP@egalvanic123"
     

@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "generated_at": "2025-11-22T22:28:25.916582",
+    "old_file": "./complete_captures_20251121_195939/complete_capture.json",
+    "new_file": "./complete_captures_20251121_200510/complete_capture.json"
+  },
+  "statistics": {
+    "total_paths_compared": 81,
+    "differences_found": 3,
+    "critical": 0,
+    "major": 0,
+    "minor": 3,
+    "identical": 32
+  },
+  "differences": [
+    {
+      "path": "api_responses[0].timestamp",
+      "type": "value_changed",
+      "old_value": "1763735414257",
+      "new_value": "1763735745811",
+      "severity": "MINOR"
+    },
+    {
+      "path": "metadata.capture_timestamp",
+      "type": "value_changed",
+      "old_value": "2025-11-21T19:59:49.017202",
+      "new_value": "2025-11-21T20:05:19.520691",
+      "severity": "MINOR"
+    },
+    {
+      "path": "metadata.output_directory",
+      "type": "value_changed",
+      "old_value": "complete_captures_20251121_195939",
+      "new_value": "complete_captures_20251121_200510",
+      "severity": "MINOR"
+    }
+  ]
+}

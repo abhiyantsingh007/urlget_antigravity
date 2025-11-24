@@ -1,0 +1,121 @@
+/Users/vishwa/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+######################################################################
+# FULL ASSET CAPTURE TOOL
+######################################################################
+Site: Super Caremark
+Email: rahul+acme@egalvanic.com
+######################################################################
+
+
+======================================================================
+🔵 RND WEBSITE
+======================================================================
+
+============================================================
+Logging into: https://acme.egalvanic-rnd.com
+============================================================
+✓ Entered email: rahul+acme@egalvanic.com
+✓ Entered password
+✓ Clicked Sign In
+✓ Login successful!
+
+🔍 Navigating to Assets page...
+✓ Navigated to Assets page
+
+============================================================
+📦 CAPTURING ALL ASSETS
+============================================================
+
+⚙ Attempting to set rows per page to 100...
+
+📜 Scrolling to load all assets...
+✓ Finished scrolling
+
+📄 Processing Page 1...
+
+📄 Extracting assets from page source...
+Found 0 table rows
+Trying alternative selectors...
+Found 0 MUI table rows
+Trying div-based table...
+Found 9 role=row elements
+
+✓ Extracted 0 assets from current page
+⚠ No assets found on page 1
+📸 Saved screenshot: assets_page_debug_1763979589.png
+💾 Saved page source for debugging
+
+============================================================
+✓ CAPTURE COMPLETE: 0 assets
+============================================================
+
+💾 Saved: rnd_complete_assets_20251124_154949.json
+
+======================================================================
+🟣 AI WEBSITE
+======================================================================
+
+============================================================
+Logging into: https://acme.egalvanic.ai
+============================================================
+✓ Entered email: rahul+acme@egalvanic.com
+✓ Entered password
+✓ Clicked Sign In
+✓ Login successful!
+
+🔍 Navigating to Assets page...
+✓ Navigated to Assets page
+
+============================================================
+📦 CAPTURING ALL ASSETS
+============================================================
+
+⚙ Attempting to set rows per page to 100...
+
+📜 Scrolling to load all assets...
+✓ Finished scrolling
+
+📄 Processing Page 1...
+
+📄 Extracting assets from page source...
+Found 0 table rows
+Trying alternative selectors...
+Found 0 MUI table rows
+Trying div-based table...
+Found 9 role=row elements
+
+✓ Extracted 0 assets from current page
+⚠ No assets found on page 1
+📸 Saved screenshot: assets_page_debug_1763979607.png
+💾 Saved page source for debugging
+
+============================================================
+✓ CAPTURE COMPLETE: 0 assets
+============================================================
+
+💾 Saved: ai_complete_assets_20251124_155007.json
+
+======================================================================
+📊 GENERATING COMPARISON
+======================================================================
+
+RND Assets: 0
+AI Assets: 0
+Common: 0
+Only in RND: 0
+Only in AI: 0
+Field Differences: 0
+
+💾 Saved comparison: detailed_comparison_20251124_155007.json
+
+✓ Done! Check the JSON files for complete data.
+
+🚪 Closing browser...
+Press Enter to close browser...Traceback (most recent call last):
+  File "/Users/vishwa/Downloads/Scupltsoft/urlget_antigravity/full_asset_capture.py", line 525, in <module>
+    capturer.run(email, password, site_name)
+  File "/Users/vishwa/Downloads/Scupltsoft/urlget_antigravity/full_asset_capture.py", line 448, in run
+    input("Press Enter to close browser...")
+EOFError: EOF when reading a line

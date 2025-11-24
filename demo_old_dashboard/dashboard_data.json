@@ -1,0 +1,42 @@
+{
+  "api_responses": [
+    {
+      "url": "https://example.com/api/dashboard/sites",
+      "response": {
+        "sites": {
+          "Site657": {
+            "name": "Site657",
+            "total_assets": 1,
+            "open_issues": 5,
+            "active_sessions": 2
+          },
+          "All Facilities": {
+            "name": "All Facilities",
+            "total_assets": 2535,
+            "open_issues": 71,
+            "active_sessions": 43,
+            "pending_tasks": 144
+          },
+          "London UK": {
+            "name": "London UK",
+            "total_assets": 450,
+            "open_issues": 12,
+            "active_sessions": 8
+          },
+          "Melbourne AU": {
+            "name": "Melbourne AU",
+            "total_assets": 320,
+            "open_issues": 15,
+            "active_sessions": 5
+          },
+          "Toronto Canada": {
+            "name": "Toronto Canada",
+            "total_assets": 275,
+            "open_issues": 8,
+            "active_sessions": 3
+          }
+        }
+      }
+    }
+  ]
+}

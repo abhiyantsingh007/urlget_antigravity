@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JSON Comparison Report</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .timestamp {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            border-left: 5px solid #ddd;
+        }
+        
+        .stat-card.critical {
+            border-left-color: #e74c3c;
+            background: #fdf5f5;
+        }
+        
+        .stat-card.major {
+            border-left-color: #f39c12;
+            background: #fffaf0;
+        }
+        
+        .stat-card.minor {
+            border-left-color: #3498db;
+            background: #f0f8ff;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .stat-card.critical .stat-number { color: #e74c3c; }
+        .stat-card.major .stat-number { color: #f39c12; }
+        .stat-card.minor .stat-number { color: #3498db; }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+        }
+        
+        .section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .difference-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        .difference-table th {
+            background: #f8f9fa;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #dee2e6;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        
+        .difference-table td {
+            padding: 12px;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 13px;
+        }
+        
+        .difference-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .path {
+            font-family: 'Courier New', monospace;
+            background: #f5f5f5;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            word-break: break-all;
+            color: #c7254e;
+        }
+        
+        .value {
+            font-family: 'Courier New', monospace;
+            background: #f5f5f5;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            word-break: break-word;
+            max-width: 400px;
+        }
+        
+        .value.old {
+            border-left: 3px solid #e74c3c;
+        }
+        
+        .value.new {
+            border-left: 3px solid #27ae60;
+        }
+        
+        .severity {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .severity.critical {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .severity.major {
+            background: #f39c12;
+            color: white;
+        }
+        
+        .severity.minor {
+            background: #3498db;
+            color: white;
+        }
+        
+        .type-badge {
+            display: inline-block;
+            background: #ecf0f1;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+        
+        .empty-state svg {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+            opacity: 0.5;
+        }
+        
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        .summary-table tr {
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .summary-table td {
+            padding: 12px;
+        }
+        
+        .summary-table tr:nth-child(odd) {
+            background: #f8f9fa;
+        }
+        
+        .collapsible {
+            cursor: pointer;
+            padding: 12px;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            margin-top: 10px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        
+        .collapsible:hover {
+            background: #e9ecef;
+        }
+        
+        .collapsible.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .collapsible-content {
+            display: none;
+            padding: 15px;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-top: none;
+        }
+        
+        .collapsible-content.active {
+            display: block;
+        }
+        
+        .expand-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .expand-icon.active {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>JSON Comparison Report</h1>
+            <p>Comprehensive analysis of all JSON differences</p>
+            <div class="timestamp">Generated: 2025-11-22 22:24:03</div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card critical">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Critical Issues</div>
+            </div>
+            <div class="stat-card major">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Major Changes</div>
+            </div>
+            <div class="stat-card minor">
+                <div class="stat-number">22</div>
+                <div class="stat-label">Minor Changes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" style="color: #27ae60;">31</div>
+                <div class="stat-label">Identical Paths</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Comparison Summary</h2>
+            <table class="summary-table">
+                <tr><td><strong>Old JSON File:</strong></td><td style="font-family: monospace;">complete_captures_20251121_200510/complete_capture.json</td></tr>
+                <tr><td><strong>New JSON File:</strong></td><td style="font-family: monospace;">complete_captures_20251121_201827/complete_capture.json</td></tr>
+                <tr><td><strong>Total Paths Compared:</strong></td><td>81</td></tr>
+                <tr><td><strong>Total Differences:</strong></td><td><strong>23</strong></td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>🟡 Major Changes (1)</h2>
+            <p><strong style="color: #f39c12;">REVIEW RECOMMENDED</strong> - These changes should be reviewed to ensure they are intentional.</p>
+            <table class="difference-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Path</th>
+                        <th style="width: 15%;">Type</th>
+                        <th style="width: 20%;">Old Value</th>
+                        <th style="width: 20%;">New Value</th>
+                        <th style="width: 15%;">Severity</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td><div class="path">api_responses</div></td>
+                        <td><span class="type-badge">list_length_changed</span></td>
+                        <td><div class="value old">Length: 1</div></td>
+                        <td><div class="value new">Length: 19</div></td>
+                        <td><span class="severity major">MAJOR</span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="section">
+            <h2>🔵 Minor Changes (22)</h2>
+            <p>These are minor differences that may not require action.</p>
+
+            <div style="display: block;">
+
+                <table class="difference-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">Path</th>
+                            <th style="width: 15%;">Type</th>
+                            <th style="width: 20%;">Old Value</th>
+                            <th style="width: 20%;">New Value</th>
+                            <th style="width: 15%;">Severity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td><div class="path">api_responses[0].timestamp</div></td>
+                            <td><span class="type-badge">value_changed</span></td>
+                            <td><div class="value old">1763735745811</div></td>
+                            <td><div class="value new">1763736540629</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[1]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[2]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[3]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[4]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[5]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[6]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[7]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[8]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[9]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[10]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[11]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[12]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[13]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[14]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[15]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[16]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[17]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">api_responses[18]</div></td>
+                            <td><span class="type-badge">list_element_added</span></td>
+                            <td><div class="value old">None</div></td>
+                            <td><div class="value new">dict with 5 items</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">metadata.capture_timestamp</div></td>
+                            <td><span class="type-badge">value_changed</span></td>
+                            <td><div class="value old">2025-11-21T20:05:19.520691</div></td>
+                            <td><div class="value new">2025-11-21T20:18:34.768729</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">metadata.output_directory</div></td>
+                            <td><span class="type-badge">value_changed</span></td>
+                            <td><div class="value old">complete_captures_20251121_200510</div></td>
+                            <td><div class="value new">complete_captures_20251121_201827</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="path">ui_data.visible_text</div></td>
+                            <td><span class="type-badge">value_changed</span></td>
+                            <td><div class="value old">Egalvanic
+Sign into your account
+Email Address *
+Password *
+Sign In
+Forgot your password?</div></td>
+                            <td><div class="value new">R
+rahul+acme@egalvanic.com
+Egalvanic
+DASHBOARDS
+Site Overview
+Arc Flash Readiness
+Equipment Insights...</div></td>
+                            <td><span class="severity minor">MINOR</span></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script>
+        function toggleCollapsible(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.expand-icon');
+            
+            element.classList.toggle('active');
+            content.classList.toggle('active');
+            icon.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

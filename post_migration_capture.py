@@ -282,7 +282,7 @@ class PostMigrationDataCapture:
 
 if __name__ == "__main__":
     # Configuration - Update with actual credentials
-    BASE_URL = "https://acme.qa.egalvanic.ai"  # Update if URL changes after migration
+    BASE_URL = "https://acme.egalvanic.ai"  # Update if URL changes after migration
     EMAIL = "rahul+acme@egalvanic.com"
     PASSWORD = "RP@egalvanic123"
     

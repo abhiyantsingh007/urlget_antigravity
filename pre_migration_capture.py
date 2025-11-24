@@ -413,7 +413,7 @@ def compare_pre_post_migration(pre_migration_dir, post_migration_dir):
 
 if __name__ == "__main__":
     # Configuration - Update with actual credentials
-    BASE_URL = "https://acme.qa.egalvanic.ai"
+    BASE_URL = "https://acme.egalvanic.ai"
     EMAIL = "rahul+acme@egalvanic.com"
     PASSWORD = "RP@egalvanic123"
     

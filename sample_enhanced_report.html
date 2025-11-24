@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enhanced ACME Website Migration Verification Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2, h3 { color: #333; }
+        .summary { background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .critical { color: #d9534f; font-weight: bold; }
+        .minor { color: #f0ad4e; }
+        .identical { color: #5cb85c; }
+        .site-report { border: 1px solid #ddd; margin: 15px 0; padding: 15px; border-radius: 5px; }
+        .difference { background-color: #f9f9f9; padding: 10px; margin: 10px 0; border-left: 4px solid #5bc0de; }
+        .critical-diff { border-left-color: #d9534f; }
+        .minor-diff { border-left-color: #f0ad4e; }
+        pre { background-color: #f8f8f8; padding: 10px; overflow-x: auto; }
+        .warning { background-color: #fcf8e3; border-color: #faebcc; }
+    </style>
+</head>
+<body>
+    <h1>ENHANCED ACME WEBSITE MIGRATION VERIFICATION REPORT</h1>
+    
+    <div class="summary">
+        <h2>Summary</h2>
+        <p><strong>Verification Timestamp:</strong> 2025-11-22T14:30:00.123456</p>
+        <p><strong>Old Website:</strong> <a href="https://acme.egalvanic-rnd.com">https://acme.egalvanic-rnd.com</a></p>
+        <p><strong>New Website:</strong> <a href="https://acme.egalvanic.ai">https://acme.egalvanic.ai</a></p>
+        <p><strong>Total Sites Verified:</strong> 8</p>
+        <p><strong>Sites with Differences:</strong> 3</p>
+        <p><strong>Sites Identical:</strong> 5</p>
+        <p><strong>Critical Issues:</strong> <span class="critical">2</span></p>
+        <p><strong>Minor Differences:</strong> <span class="minor">4</span></p>
+    </div>
+    
+    <h2>Detailed Site Analysis</h2>
+    
+    <div class="site-report">
+        <h3>1. Site657 <span class="critical">Critical Differences Found</span></h3>
+        <div class="difference critical-diff">
+            <h4>CRITICAL: Total asset count changed from 1 to 0</h4>
+            <p><strong>Values:</strong> Old: 1 New: 0</p>
+            <p><strong>Impact:</strong> <span class="critical">CRITICAL - Data loss detected, requires immediate investigation</span></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>MINOR: Active users count changed from 127 to 129</h4>
+            <p><strong>Values:</strong> Old: 127 New: 129</p>
+            <p><strong>Impact:</strong> <span class="minor">Minor difference, may not affect functionality</span></p>
+        </div>
+    </div>
+    
+    <div class="site-report">
+        <h3>2. Melbourne AU Site <span class="critical">Critical Differences Found</span></h3>
+        <div class="difference critical-diff">
+            <h4>CRITICAL: Missing asset data in migrated website</h4>
+            <p><strong>Description:</strong> Asset table is empty in new website while it contains 15 assets in old website</p>
+            <p><strong>Impact:</strong> <span class="critical">CRITICAL - Data loss detected, requires immediate investigation</span></p>
+        </div>
+    </div>
+    
+    <div class="site-report">
+        <h3>3. London UK Site <span class="minor">Minor Differences Found</span></h3>
+        <div class="difference minor-diff">
+            <h4>MINOR: New feature section added in migration</h4>
+            <p><strong>Description:</strong> New div with id 'new-feature' containing 'New Feature Added in Migration' text</p>
+            <p><strong>Impact:</strong> <span class="minor">Minor difference, may not affect functionality</span></p>
+        </div>
+    </div>
+    
+    <div class="site-report">
+        <h3>4. All Facilities Site <span class="identical">Identical</span></h3>
+        <p>No differences found between old and new websites.</p>
+    </div>
+    
+    <div class="site-report">
+        <h3>5. ShowSite3 Site <span class="identical">Identical</span></h3>
+        <p>No differences found between old and new websites.</p>
+    </div>
+    
+    <div class="site-report">
+        <h3>6. Test Site <span class="identical">Identical</span></h3>
+        <p>No differences found between old and new websites.</p>
+    </div>
+    
+    <div class="site-report">
+        <h3>7. Test Site Site <span class="identical">Identical</span></h3>
+        <p>No differences found between old and new websites.</p>
+    </div>
+    
+    <div class="site-report">
+        <h3>8. Toronto Canada Site <span class="identical">Identical</span></h3>
+        <p>No differences found between old and new websites.</p>
+    </div>
+    
+    <h2>Recommendations</h2>
+    <ol>
+        <li><span class="critical">CRITICAL:</span> Investigate 2 critical issues immediately
+            <br><strong>Action:</strong> Check data migration process for sites with critical data loss (Site657 and Melbourne AU)</li>
+        <li><span class="minor">MINOR:</span> Review 4 sites with minor differences
+            <br><strong>Action:</strong> Verify that minor changes are intentional enhancements</li>
+        <li><strong>OVERALL:</strong> 5 out of 8 sites migrated successfully
+            <br><strong>Action:</strong> Continue monitoring, focus on resolving critical issues first</li>
+    </ol>
+    
+    <h2>Verification Methodology</h2>
+    <ul>
+        <li>Page source comparison for structural differences</li>
+        <li>Visible text comparison for content differences</li>
+        <li>Numeric value extraction and comparison for asset counts and metrics</li>
+        <li>Automated verification across all sites in dropdown menu</li>
+        <li>Detailed reporting of all discrepancies found</li>
+    </ul>
+    
+    <p><em>This report was automatically generated by the Enhanced Migration Verification Framework.</em></p>
+</body>
+</html>

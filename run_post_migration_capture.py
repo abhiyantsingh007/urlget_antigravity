@@ -7,7 +7,7 @@ from post_migration_capture import PostMigrationDataCapture
 from pre_migration_capture import compare_pre_post_migration
 
 # Configuration - Update with actual credentials
-BASE_URL = "https://acme.qa.egalvanic.ai"  # Update if URL changes after migration
+BASE_URL = "https://acme.egalvanic.ai"  # Update if URL changes after migration
 EMAIL = "rahul+acme@egalvanic.com"
 PASSWORD = "RP@egalvanic123"
 

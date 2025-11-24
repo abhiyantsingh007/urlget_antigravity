@@ -1,0 +1,49 @@
+{
+  "api_responses": [
+    {
+      "url": "https://acme.egalvanic.ai",
+      "response": {
+        "sites": {
+          "Super Caremark": {
+            "name": "Super Caremark",
+            "total_assets": 180,
+            "equipment_at_risk": 455000,
+            "open_issues": 10,
+            "unresolved_issues": 6,
+            "resolved_issues": 47,
+            "total_issues": 57,
+            "active_sessions": 3,
+            "completed_sessions": 30,
+            "total_sessions": 33,
+            "pending_tasks": 4,
+            "completed_tasks": 13,
+            "total_tasks": 17,
+            "opportunities_value": 150000,
+            "opportunities_count": 4,
+            "compliance_score": 98,
+            "safety_score": 95,
+            "verification_method": "Automated UI Capture"
+          },
+          "Site657": {
+            "name": "Site657",
+            "total_assets": 0,
+            "open_issues": 5,
+            "unresolved_issues": 5,
+            "pending_tasks": 2
+          },
+          "All Facilities": {
+            "name": "All Facilities",
+            "total_assets": 1048,
+            "open_issues": 57,
+            "unresolved_issues": 45,
+            "resolved_issues": 275,
+            "active_sessions": 33,
+            "pending_tasks": 129,
+            "opportunities_value": 334000,
+            "equipment_at_risk": 950000
+          }
+        }
+      }
+    }
+  ]
+}

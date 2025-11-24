@@ -1,0 +1,17 @@
+{
+  "url": "https://acme.egalvanic.ai/api/arc-flash",
+  "status": 200,
+  "mimeType": "application/json",
+  "timestamp": 1700643709456,
+  "response": {
+    "arc_flash_reports": [
+      {
+        "id": 501,
+        "equipment": "Panel P1",
+        "risk_level": "High",
+        "last_updated": "2025-11-20"
+      }
+    ]
+  },
+  "site": "London UK"
+}

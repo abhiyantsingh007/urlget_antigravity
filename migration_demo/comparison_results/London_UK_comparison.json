@@ -1,0 +1,16 @@
+{
+  "site": "London UK",
+  "comparison_timestamp": "2025-11-21T23:30:00.123456",
+  "differences": [
+    {
+      "type": "page_source",
+      "status": "different",
+      "details": "Page source content differs between old and new websites - new website has additional feature"
+    },
+    {
+      "type": "visible_text",
+      "status": "different",
+      "details": "Visible text content differs between old and new websites - new website shows additional feature"
+    }
+  ]
+}

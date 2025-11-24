@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "url": "https://acme.egalvanic.ai",
+    "capture_time": "2025-11-24T11:27:21.329752",
+    "total_responses": 2
+  },
+  "api_responses": [
+    {
+      "url": "https://eg-pz.egalvanic.ai/api/branding/partner/egalvanic",
+      "response": {
+        "accent_color": "#bf1e2e",
+        "display_name": "Egalvanic",
+        "id": "f95a46ff-29af-4a34-b6a2-c0578b0338cb",
+        "invoke_url": null,
+        "large_logo": "https://eg-pz-prod-s3-branding-ohio.s3.us-east-2.amazonaws.com/alliance-partner-logos/egalvanic-logo-large.png",
+        "name": "egalvanic",
+        "primary_color": "#3a3a3c",
+        "small_logo": "https://eg-pz-prod-s3-branding-ohio.s3.us-east-2.amazonaws.com/alliance-partner-logos/eg-logo-small.png"
+      }
+    },
+    {
+      "url": "https://eg-pz.egalvanic.ai/api/branding/company/acme",
+      "response": {
+        "accent_color": "#bf1e2e",
+        "id": "0a61e613-7887-4c10-99bf-59cedc4460f2",
+        "large_logo": "https://eg-pz-prod-s3-branding-ohio.s3.us-east-2.amazonaws.com/logos/acme.png",
+        "name": "Acme",
+        "primary_color": "#D3D3D3",
+        "small_logo": "https://eg-pz-prod-s3-branding-ohio.s3.us-east-2.amazonaws.com/logos/acme.png"
+      }
+    }
+  ]
+}

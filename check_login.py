@@ -11,7 +11,7 @@ def check_login():
     """Check if we can log in with the provided credentials"""
     
     # Configuration
-    BASE_URL = "https://acme.qa.egalvanic.ai"
+    BASE_URL = "https://acme.egalvanic-rnd.com"
     EMAIL = "rahul@egalvanic.com"
     PASSWORD = "RP@egalvanic123"
     

@@ -1,0 +1,119 @@
+{
+  "verification_timestamp": "2025-11-22T14:30:00.123456",
+  "old_website_url": "https://acme.egalvanic-rnd.com",
+  "new_website_url": "https://acme.egalvanic.ai",
+  "sites_verified": [
+    "London UK",
+    "All Facilities",
+    "Melbourne AU",
+    "ShowSite3",
+    "test",
+    "test site",
+    "Toronto Canada",
+    "Site657"
+  ],
+  "old_sites_captured": [
+    "London UK",
+    "All Facilities",
+    "Melbourne AU",
+    "ShowSite3",
+    "test",
+    "test site",
+    "Toronto Canada",
+    "Site657"
+  ],
+  "new_sites_captured": [
+    "London UK",
+    "All Facilities",
+    "Melbourne AU",
+    "ShowSite3",
+    "test",
+    "test site",
+    "Toronto Canada",
+    "Site657"
+  ],
+  "comparison_results": [
+    {
+      "site": "Site657",
+      "comparison_timestamp": "2025-11-22T14:30:00.123456",
+      "differences": [
+        {
+          "type": "numeric_difference",
+          "status": "different",
+          "severity": "CRITICAL",
+          "details": "Numeric value changed from 1 to 0",
+          "old_value": 1,
+          "new_value": 0
+        },
+        {
+          "type": "visible_text",
+          "status": "different",
+          "details": "Visible text content differs between old and new websites"
+        }
+      ]
+    },
+    {
+      "site": "Melbourne AU",
+      "comparison_timestamp": "2025-11-22T14:30:00.123456",
+      "differences": [
+        {
+          "type": "page_source",
+          "status": "different",
+          "details": "Page source content differs between old and new websites"
+        },
+        {
+          "type": "numeric_difference",
+          "status": "different",
+          "severity": "CRITICAL",
+          "details": "Numeric value changed from 15 to 0",
+          "old_value": 15,
+          "new_value": 0
+        }
+      ]
+    },
+    {
+      "site": "London UK",
+      "comparison_timestamp": "2025-11-22T14:30:00.123456",
+      "differences": [
+        {
+          "type": "visible_text",
+          "status": "different",
+          "details": "Visible text content differs between old and new websites"
+        },
+        {
+          "type": "numeric_difference",
+          "status": "different",
+          "severity": "MINOR",
+          "details": "Numeric value changed from 127 to 129",
+          "old_value": 127,
+          "new_value": 129
+        }
+      ]
+    },
+    {
+      "site": "All Facilities",
+      "comparison_timestamp": "2025-11-22T14:30:00.123456",
+      "differences": []
+    },
+    {
+      "site": "ShowSite3",
+      "comparison_timestamp": "2025-11-22T14:30:00.123456",
+      "differences": []
+    },
+    {
+      "site": "test",
+      "comparison_timestamp": "2025-11-22T14:30:00.123456",
+      "differences": []
+    },
+    {
+      "site": "test site",
+      "comparison_timestamp": "2025-11-22T14:30:00.123456",
+      "differences": []
+    },
+    {
+      "site": "Toronto Canada",
+      "comparison_timestamp": "2025-11-22T14:30:00.123456",
+      "differences": []
+    }
+  ]
+}

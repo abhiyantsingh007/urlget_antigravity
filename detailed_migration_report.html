@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detailed Migration Verification Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2, h3 { color: #333; }
+        .summary { background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .critical { color: #d9534f; font-weight: bold; }
+        .minor { color: #f0ad4e; }
+        .identical { color: #5cb85c; }
+        .endpoint-report { border: 1px solid #ddd; margin: 15px 0; padding: 15px; border-radius: 5px; }
+        .difference { background-color: #f9f9f9; padding: 10px; margin: 10px 0; border-left: 4px solid #5bc0de; }
+        .critical-diff { border-left-color: #d9534f; }
+        .minor-diff { border-left-color: #f0ad4e; }
+        .added-diff { border-left-color: #5cb85c; }
+        .removed-diff { border-left-color: #333; }
+        pre { background-color: #f8f8f8; padding: 10px; overflow-x: auto; white-space: pre-wrap; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 20px 0; }
+        .stat-card { background: white; border: 1px solid #ddd; padding: 15px; text-align: center; border-radius: 5px; }
+        .stat-number { font-size: 24px; font-weight: bold; }
+        .critical .stat-number { color: #d9534f; }
+        .minor .stat-number { color: #f0ad4e; }
+        .identical .stat-number { color: #5cb85c; }
+        .total .stat-number { color: #333; }
+        .only-old .stat-number { color: #d9534f; }
+        .only-new .stat-number { color: #5bc0de; }
+    </style>
+</head>
+<body>
+    <h1>DETAILED MIGRATION VERIFICATION REPORT</h1>
+    
+    <div class="summary">
+        <h2>Summary</h2>
+        <p><strong>Verification Timestamp:</strong> 2025-11-22T15:49:13.416500</p>
+        <p><strong>Old Website Data:</strong> OLD_WEBSITE_CAPTURE</p>
+        <p><strong>New Website Data:</strong> NEW_WEBSITE_CAPTURE</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card total">
+                <div class="stat-number">3</div>
+                <div>Total Endpoints Compared</div>
+            </div>
+            <div class="stat-card critical">
+                <div class="stat-number">2</div>
+                <div>Critical Issues</div>
+            </div>
+            <div class="stat-card minor">
+                <div class="stat-number">1</div>
+                <div>Minor Differences</div>
+            </div>
+            <div class="stat-card identical">
+                <div class="stat-number">0</div>
+                <div>Identical Endpoints</div>
+            </div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card only-old">
+                <div class="stat-number">0</div>
+                <div>Only in Old Site</div>
+            </div>
+            <div class="stat-card only-new">
+                <div class="stat-number">0</div>
+                <div>Only in New Site</div>
+            </div>
+        </div>
+    </div>
+    
+    <h2>Detailed Endpoint Analysis</h2>
+    <div class="endpoint-report">
+        <h3>/api/assets/summary <span class="minor">MINOR DIFFERENCES FOUND</span></h3><p><strong>URLs:</strong><br>  Old: <code>https://acme.egalvanic-rnd.com/api/assets/summary</code><br>  New: <code>https://acme.egalvanic.ai/api/assets/summary</code></p>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED: url</h4>
+            <p><strong>Values:</strong><br>  Old: <code>https://acme.egalvanic-rnd.com/api/assets/summary</code><br>  New: <code>https://acme.egalvanic.ai/api/assets/summary</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED: response.total_assets</h4>
+            <p><strong>Values:</strong><br>  Old: <code>5432</code><br>  New: <code>2156</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED: response.by_category.HVAC</h4>
+            <p><strong>Values:</strong><br>  Old: <code>1532</code><br>  New: <code>586</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED: response.by_category.Mechanical</h4>
+            <p><strong>Values:</strong><br>  Old: <code>1800</code><br>  New: <code>720</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED: response.by_category.Electrical</h4>
+            <p><strong>Values:</strong><br>  Old: <code>2100</code><br>  New: <code>850</code></p>
+        </div>
+    </div>
+    <div class="endpoint-report">
+        <h3>/api/dashboard/stats <span class="critical">CRITICAL ISSUES FOUND</span></h3><p><strong>URLs:</strong><br>  Old: <code>https://acme.egalvanic-rnd.com/api/dashboard/stats</code><br>  New: <code>https://acme.egalvanic.ai/api/dashboard/stats</code></p>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED: url</h4>
+            <p><strong>Values:</strong><br>  Old: <code>https://acme.egalvanic-rnd.com/api/dashboard/stats</code><br>  New: <code>https://acme.egalvanic.ai/api/dashboard/stats</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED: response.total_users</h4>
+            <p><strong>Values:</strong><br>  Old: <code>127</code><br>  New: <code>129</code></p>
+        </div>
+        <div class="difference critical-diff">
+            <h4>CRITICAL DATA LOSS: response.sites_overview.Site657.total_assets</h4>
+            <p><strong>Values:</strong><br>  Old: <code>1</code><br>  New: <code>0</code></p>
+            <p><strong>Impact:</strong> <span class="critical">CRITICAL - Data loss detected, requires immediate investigation</span></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED: response.sites_overview.All Facilities.total_assets</h4>
+            <p><strong>Values:</strong><br>  Old: <code>2535</code><br>  New: <code>1048</code></p>
+        </div>
+    </div>
+    <div class="endpoint-report">
+        <h3>/api/sites/overview <span class="critical">CRITICAL ISSUES FOUND</span></h3><p><strong>URLs:</strong><br>  Old: <code>https://acme.egalvanic-rnd.com/api/sites/overview</code><br>  New: <code>https://acme.egalvanic.ai/api/sites/overview</code></p>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED: url</h4>
+            <p><strong>Values:</strong><br>  Old: <code>https://acme.egalvanic-rnd.com/api/sites/overview</code><br>  New: <code>https://acme.egalvanic.ai/api/sites/overview</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED: response[0].total_assets</h4>
+            <p><strong>Values:</strong><br>  Old: <code>2535</code><br>  New: <code>1048</code></p>
+        </div>
+        <div class="difference critical-diff">
+            <h4>CRITICAL DATA LOSS: response[1].total_assets</h4>
+            <p><strong>Values:</strong><br>  Old: <code>1</code><br>  New: <code>0</code></p>
+            <p><strong>Impact:</strong> <span class="critical">CRITICAL - Data loss detected, requires immediate investigation</span></p>
+        </div>
+    </div>
+    <h2>Recommendations</h2>
+    <ol>
+        <li><span class="critical">CRITICAL:</span> Investigate 2 critical issues immediately
+            <br><strong>Action:</strong> Check data migration process for endpoints with critical data loss</li>
+        <li><span class="minor">MINOR:</span> Review 1 endpoints with minor differences
+            <br><strong>Action:</strong> Verify that minor changes are intentional enhancements</li>
+        <li><strong>OVERALL:</strong> 0 out of 3 endpoints migrated successfully
+            <br><strong>Action:</strong> Continue monitoring, focus on resolving critical issues first</li>
+    </ol>
+    
+    <h2>Verification Methodology</h2>
+    <ul>
+        <li>Endpoint matching by path to compare equivalent APIs between old and new sites</li>
+        <li>Complete JSON structure comparison for all API responses</li>
+        <li>Deep recursive comparison of nested objects and arrays</li>
+        <li>Special detection of critical data loss patterns (positive → zero values)</li>
+        <li>Classification of differences by severity level</li>
+        <li>Comprehensive reporting of all discrepancies found</li>
+    </ul>
+    
+    <p><em>This report was automatically generated by the Detailed Migration Verification Framework.</em></p>
+</body>
+</html>

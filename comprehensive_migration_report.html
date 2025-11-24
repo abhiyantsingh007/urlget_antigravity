@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comprehensive Migration Verification Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2, h3 { color: #333; }
+        .summary { background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .critical { color: #d9534f; font-weight: bold; }
+        .minor { color: #f0ad4e; }
+        .identical { color: #5cb85c; }
+        .endpoint-report { border: 1px solid #ddd; margin: 15px 0; padding: 15px; border-radius: 5px; }
+        .difference { background-color: #f9f9f9; padding: 10px; margin: 10px 0; border-left: 4px solid #5bc0de; }
+        .critical-diff { border-left-color: #d9534f; }
+        .minor-diff { border-left-color: #f0ad4e; }
+        .added-diff { border-left-color: #5cb85c; }
+        .removed-diff { border-left-color: #333; }
+        pre { background-color: #f8f8f8; padding: 10px; overflow-x: auto; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 20px 0; }
+        .stat-card { background: white; border: 1px solid #ddd; padding: 15px; text-align: center; border-radius: 5px; }
+        .stat-number { font-size: 24px; font-weight: bold; }
+        .critical .stat-number { color: #d9534f; }
+        .minor .stat-number { color: #f0ad4e; }
+        .identical .stat-number { color: #5cb85c; }
+        .total .stat-number { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>COMPREHENSIVE MIGRATION VERIFICATION REPORT</h1>
+    
+    <div class="summary">
+        <h2>Summary</h2>
+        <p><strong>Verification Timestamp:</strong> 2025-11-24T01:25:56.592509</p>
+        <p><strong>Old Website Data:</strong> OLD_WEBSITE_DATA</p>
+        <p><strong>New Website Data:</strong> NEW_WEBSITE_DATA</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card total">
+                <div class="stat-number">4</div>
+                <div>Total Endpoints Compared</div>
+            </div>
+            <div class="stat-card critical">
+                <div class="stat-number">0</div>
+                <div>Critical Issues</div>
+            </div>
+            <div class="stat-card minor">
+                <div class="stat-number">0</div>
+                <div>Minor Differences</div>
+            </div>
+            <div class="stat-card identical">
+                <div class="stat-number">4</div>
+                <div>Identical Endpoints</div>
+            </div>
+        </div>
+    </div>
+    
+    <h2>Detailed Endpoint Analysis</h2>
+    <div class="endpoint-report">
+        <h3>https://acme.egalvanic-rnd.com/api/sites/overview <span class="critical">CRITICAL ISSUES FOUND</span></h3>
+        <div class="difference removed-diff">
+            <h4>ENDPOINT REMOVED: </h4>
+            <p><strong>Values:</strong> Old: <code>{'url': 'https://acme.egalvanic-rnd.com/api/sites/overview', 'status': 200, 'response': [{'name': 'All Facilities', 'assets': 2535, 'status': 'active'}, {'name': 'Site657', 'assets': 1, 'status': 'active'}]}</code> </p>
+        </div>
+    </div>
+    <div class="endpoint-report">
+        <h3>https://acme.egalvanic.ai/api/sites/overview <span class="minor">MINOR DIFFERENCES FOUND</span></h3>
+        <div class="difference added-diff">
+            <h4>ENDPOINT ADDED: </h4>
+            <p><strong>Values:</strong> New: <code>{'url': 'https://acme.egalvanic.ai/api/sites/overview', 'status': 200, 'response': [{'name': 'All Facilities', 'assets': 1048, 'status': 'active'}, {'name': 'Site657', 'assets': 0, 'status': 'active'}]}</code></p>
+        </div>
+    </div>
+    <div class="endpoint-report">
+        <h3>https://acme.egalvanic-rnd.com/api/dashboard/stats <span class="critical">CRITICAL ISSUES FOUND</span></h3>
+        <div class="difference removed-diff">
+            <h4>ENDPOINT REMOVED: </h4>
+            <p><strong>Values:</strong> Old: <code>{'url': 'https://acme.egalvanic-rnd.com/api/dashboard/stats', 'status': 200, 'response': {'sites': {'All Facilities': {'total_assets': 2535, 'active_sites': 42, 'pending_tasks': 15}, 'Site657': {'total_assets': 1, 'active_sites': 1, 'pending_tasks': 0}}, 'total_users': 127}}</code> </p>
+        </div>
+    </div>
+    <div class="endpoint-report">
+        <h3>https://acme.egalvanic.ai/api/dashboard/stats <span class="minor">MINOR DIFFERENCES FOUND</span></h3>
+        <div class="difference added-diff">
+            <h4>ENDPOINT ADDED: </h4>
+            <p><strong>Values:</strong> New: <code>{'url': 'https://acme.egalvanic.ai/api/dashboard/stats', 'status': 200, 'response': {'sites': {'All Facilities': {'total_assets': 1048, 'active_sites': 42, 'pending_tasks': 15}, 'Site657': {'total_assets': 0, 'active_sites': 1, 'pending_tasks': 0}}, 'total_users': 129}}</code></p>
+        </div>
+    </div>
+    <h2>Recommendations</h2>
+    <ol>
+        <li><strong>OVERALL:</strong> 4 out of 4 endpoints migrated successfully
+            <br><strong>Action:</strong> Continue monitoring, focus on resolving critical issues first</li>
+    </ol>
+    
+    <h2>Verification Methodology</h2>
+    <ul>
+        <li>Complete JSON structure comparison for all API endpoints</li>
+        <li>Deep recursive comparison of nested objects and arrays</li>
+        <li>Special detection of critical data loss patterns (positive → zero values)</li>
+        <li>Classification of differences by severity level</li>
+        <li>Comprehensive reporting of all discrepancies found</li>
+    </ul>
+    
+    <p><em>This report was automatically generated by the Comprehensive Migration Verification Framework.</em></p>
+</body>
+</html>

@@ -1,0 +1,236 @@
+/Users/vishwa/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+######################################################################
+# COMPLETE ALL SITES COMPARISON TOOL
+# Captures and compares EVERY site from both websites
+######################################################################
+
+
+######################################################################
+# RND WEBSITE
+# https://acme.egalvanic-rnd.com
+######################################################################
+
+============================================================
+Logging into: https://acme.egalvanic-rnd.com
+============================================================
+✓ Email entered
+✓ Password entered
+✓ Sign in clicked
+✓ Login successful!
+
+📋 Getting list of all sites...
+✗ Error getting sites: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000104afaecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000104af2b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x000000010460a2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x000000010465188c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000104692d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x0000000104645ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x0000000104abe0c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x0000000104ac18dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x0000000104a9e84c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x0000000104ac21b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x0000000104a900f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000104ae1498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x0000000104ae161c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x0000000104af27d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x00000001907a8c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001907a3ba8 thread_start + 8
+
+✓ Found 1 sites (fallback): ['test']
+
+[1/1] Processing: test
+
+  🎯 Selecting site: test
+  ✗ Could not select site: Message: no such element: Unable to locate element: {"method":"css selector","selector":".MuiAutocomplete-root input"}
+  (Session info: chrome=142.0.7444.176); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104afaecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000104af2b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x000000010460a2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x000000010465188c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000104692d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x0000000104645ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x0000000104abe0c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x0000000104ac18dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x0000000104a9e84c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x0000000104ac21b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x0000000104a900f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000104ae1498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x0000000104ae161c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x0000000104af27d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x00000001907a8c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001907a3ba8 thread_start + 8
+
+  ⚠ Skipped: test
+
+✓ Completed RND WEBSITE: 0 sites captured
+
+💾 Saved: rnd_all_sites_data.json
+
+######################################################################
+# AI WEBSITE
+# https://acme.egalvanic.ai
+######################################################################
+
+============================================================
+Logging into: https://acme.egalvanic.ai
+============================================================
+✓ Email entered
+✓ Password entered
+✓ Sign in clicked
+✓ Login successful!
+
+📋 Getting list of all sites...
+✓ Found 18 sites: ['All Facilities', 'BCES Test Site - Aiden', 'EHE NEW TS', 'EHE NTS 2', 'EHE SKM TEST', 'Johnston Boiler-Ferrysburg', 'M Electric - Jacksonville HQ', 'MC Testing', 'SAMPLE SITE 102925', 'Saveland Avenue Lofts', 'site_38917', 'site657', 'site658', 'site688', 'SKM - Champlin Dry Run', 'test site -89', 'Test site R', 'TS3']
+
+[1/18] Processing: All Facilities
+
+  🎯 Selecting site: All Facilities
+  ✓ Selected: All Facilities
+  📊 Capturing metrics for: All Facilities
+  ✓ Captured 0 metrics
+
+[2/18] Processing: BCES Test Site - Aiden
+
+  🎯 Selecting site: BCES Test Site - Aiden
+  ✓ Selected: BCES Test Site - Aiden
+  📊 Capturing metrics for: BCES Test Site - Aiden
+  ✓ Captured 0 metrics
+
+[3/18] Processing: EHE NEW TS
+
+  🎯 Selecting site: EHE NEW TS
+  ✓ Selected: EHE NEW TS
+  📊 Capturing metrics for: EHE NEW TS
+  ✓ Captured 0 metrics
+
+[4/18] Processing: EHE NTS 2
+
+  🎯 Selecting site: EHE NTS 2
+  ✓ Selected: EHE NTS 2
+  📊 Capturing metrics for: EHE NTS 2
+  ✓ Captured 0 metrics
+
+[5/18] Processing: EHE SKM TEST
+
+  🎯 Selecting site: EHE SKM TEST
+  ✓ Selected: EHE SKM TEST
+  📊 Capturing metrics for: EHE SKM TEST
+  ✓ Captured 0 metrics
+
+[6/18] Processing: Johnston Boiler-Ferrysburg
+
+  🎯 Selecting site: Johnston Boiler-Ferrysburg
+  ✓ Selected: Johnston Boiler-Ferrysburg
+  📊 Capturing metrics for: Johnston Boiler-Ferrysburg
+  ✓ Captured 0 metrics
+
+[7/18] Processing: M Electric - Jacksonville HQ
+
+  🎯 Selecting site: M Electric - Jacksonville HQ
+  ✓ Selected: M Electric - Jacksonville HQ
+  📊 Capturing metrics for: M Electric - Jacksonville HQ
+  ✓ Captured 0 metrics
+
+[8/18] Processing: MC Testing
+
+  🎯 Selecting site: MC Testing
+  ✓ Selected: MC Testing
+  📊 Capturing metrics for: MC Testing
+  ✓ Captured 0 metrics
+
+[9/18] Processing: SAMPLE SITE 102925
+
+  🎯 Selecting site: SAMPLE SITE 102925
+  ✓ Selected: SAMPLE SITE 102925
+  📊 Capturing metrics for: SAMPLE SITE 102925
+  ✓ Captured 0 metrics
+
+[10/18] Processing: Saveland Avenue Lofts
+
+  🎯 Selecting site: Saveland Avenue Lofts
+  ✓ Selected: Saveland Avenue Lofts
+  📊 Capturing metrics for: Saveland Avenue Lofts
+  ✓ Captured 0 metrics
+
+[11/18] Processing: site_38917
+
+  🎯 Selecting site: site_38917
+  ✓ Selected: site_38917
+  📊 Capturing metrics for: site_38917
+  ✓ Captured 0 metrics
+
+[12/18] Processing: site657
+
+  🎯 Selecting site: site657
+  ✓ Selected: site657
+  📊 Capturing metrics for: site657
+  ✓ Captured 0 metrics
+
+[13/18] Processing: site658
+
+  🎯 Selecting site: site658
+  ✓ Selected: site658
+  📊 Capturing metrics for: site658
+  ✓ Captured 0 metrics
+
+[14/18] Processing: site688
+
+  🎯 Selecting site: site688
+  ✓ Selected: site688
+  📊 Capturing metrics for: site688
+  ✓ Captured 0 metrics
+
+[15/18] Processing: SKM - Champlin Dry Run
+
+  🎯 Selecting site: SKM - Champlin Dry Run
+  ✓ Selected: SKM - Champlin Dry Run
+  📊 Capturing metrics for: SKM - Champlin Dry Run
+  ✓ Captured 0 metrics
+
+[16/18] Processing: test site -89
+
+  🎯 Selecting site: test site -89
+  ✓ Selected: test site -89
+  📊 Capturing metrics for: test site -89
+  ✓ Captured 0 metrics
+
+[17/18] Processing: Test site R
+
+  🎯 Selecting site: Test site R
+  ✓ Selected: Test site R
+  📊 Capturing metrics for: Test site R
+  ✓ Captured 0 metrics
+
+[18/18] Processing: TS3
+
+  🎯 Selecting site: TS3
+  ✓ Selected: TS3
+  📊 Capturing metrics for: TS3
+  ✓ Captured 0 metrics
+
+✓ Completed AI WEBSITE: 18 sites captured
+💾 Saved: ai_all_sites_data.json
+
+======================================================================
+📊 COMPARING ALL SITES
+======================================================================
+
+Total Comparisons: 0
+  Critical: 0
+  Major: 0
+  Minor: 0
+💾 Saved: complete_sites_comparison.json
+
+✓ HTML report generated: complete_all_sites_comparison.html
+
+======================================================================
+✓ COMPLETE! Check the HTML report for full details.
+======================================================================
+
+
+🚪 Closing browser...

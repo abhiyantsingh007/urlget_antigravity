@@ -1,0 +1,59 @@
+/Users/vishwa/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+🔐 Logging in...
+✅ Logged in successfully
+📸 Screenshot saved: dashboard_screenshot.png
+📄 HTML saved: dashboard_page_source.html
+
+🔍 Looking for dropdown elements...
+
+✅ Found 7 'buttons with aria-label' elements:
+   [0] Text: (no text), Aria: open drawer, Class: MuiButtonBase-root MuiIconButton-root MuiIconButto
+   [1] Text: (no text), Aria: Open, Class: MuiButtonBase-root MuiIconButton-root MuiIconButto
+   [2] Text: (no text), Aria: Open assistant tray, Class: MuiButtonBase-root MuiIconButton-root MuiIconButto
+   [3] Text: (no text), Aria: Percentage of required asset fields that are filled out across all assets, Class: MuiButtonBase-root MuiIconButton-root MuiIconButto
+   [4] Text: (no text), Aria: Percentage of assets requiring a source connection that have an incoming connection, Class: MuiButtonBase-root MuiIconButton-root MuiIconButto
+
+✅ Found 179 'role=button' elements:
+   [0] Text: (no text), Aria: (no aria-label), Class: react-flow__node react-flow__node-generator select
+   [1] Text: (no text), Aria: (no aria-label), Class: react-flow__node react-flow__node-circuitBreaker s
+   [2] Text: (no text), Aria: (no aria-label), Class: react-flow__node react-flow__node-electricalPanel 
+   [3] Text: (no text), Aria: (no aria-label), Class: react-flow__node react-flow__node-circuitBreaker s
+   [4] Text: (no text), Aria: (no aria-label), Class: react-flow__node react-flow__node-circuitBreaker s
+
+✅ Found 1 'role=combobox' elements:
+   [0] Text: (no text), Aria: (no aria-label), Class: MuiInputBase-input MuiOutlinedInput-input MuiInput
+
+✅ Found 1 'autocomplete inputs' elements:
+   [0] Text: (no text), Aria: (no aria-label), Class: MuiInputBase-input MuiOutlinedInput-input MuiInput
+
+
+🖱️  Attempting to click potential site dropdowns...
+
+Found 1 combobox elements
+  Combobox 0: <input aria-invalid="false" autocomplete="off" id="«rh»" placeholder="Select facility" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedEnd MuiAuto
+
+Found 5 MUI Autocomplete elements
+  MUI Input: <input aria-invalid="false" autocomplete="off" id="«rh»" placeholder="Select facility" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedEnd MuiAuto
+📸 Dropdown opened screenshot: dropdown_opened.png
+  Found 26 options:
+    - All Facilities
+    - A1S
+    - Article Demo Site
+    - BCES Test Site - Aiden
+    - DEMO-103126
+    - EHE NEW TS
+    - EHE NTS 2
+    - EHE SKM TEST
+    - Johnston Boiler-Ferrysburg
+    - M Electric - Jacksonville HQ
+
+
+⏸️  Browser will stay open for 60 seconds so you can inspect manually...
+Look at the dropdown and note:
+  1. What type of element is it? (select, button, input, etc.)
+  2. What classes does it have?
+  3. How do you open it?
+  4. How are the options displayed?
+
+✅ Inspection complete. Check the screenshots and HTML files.

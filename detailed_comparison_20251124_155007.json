@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "rnd_total": 0,
+    "ai_total": 0,
+    "common": 0,
+    "only_in_rnd": 0,
+    "only_in_ai": 0,
+    "field_differences": 0
+  },
+  "only_in_rnd": [],
+  "only_in_ai": [],
+  "field_differences": []
+}

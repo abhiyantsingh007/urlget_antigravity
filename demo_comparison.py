@@ -14,7 +14,7 @@ def demo_comparison():
     # Simulate pre-migration data (from our demo capture)
     pre_migration_data = [
         {
-            "url": "https://acme.qa.egalvanic.ai/api/dashboard/stats",
+            "url": "https://acme.egalvanic.ai/api/dashboard/stats",
             "status": 200,
             "response": {
                 "total_sites": 42,
@@ -24,7 +24,7 @@ def demo_comparison():
             }
         },
         {
-            "url": "https://acme.qa.egalvanic.ai/api/sites",
+            "url": "https://acme.egalvanic.ai/api/sites",
             "status": 200,
             "response": {
                 "sites": [
@@ -35,7 +35,7 @@ def demo_comparison():
             }
         },
         {
-            "url": "https://acme.qa.egalvanic.ai/api/profile",
+            "url": "https://acme.egalvanic.ai/api/profile",
             "status": 200,
             "response": {
                 "user_id": 1001,
@@ -49,7 +49,7 @@ def demo_comparison():
     # Simulate post-migration data (with some changes)
     post_migration_data = [
         {
-            "url": "https://acme.qa.egalvanic.ai/api/dashboard/stats",
+            "url": "https://acme.egalvanic.ai/api/dashboard/stats",
             "status": 200,
             "response": {
                 "total_sites": 42,  # Same
@@ -59,7 +59,7 @@ def demo_comparison():
             }
         },
         {
-            "url": "https://acme.qa.egalvanic.ai/api/sites",
+            "url": "https://acme.egalvanic.ai/api/sites",
             "status": 200,
             "response": {
                 "sites": [
@@ -71,7 +71,7 @@ def demo_comparison():
             }
         },
         {
-            "url": "https://acme.qa.egalvanic.ai/api/profile",
+            "url": "https://acme.egalvanic.ai/api/profile",
             "status": 200,
             "response": {
                 "user_id": 1001,
@@ -81,7 +81,7 @@ def demo_comparison():
             }
         },
         {
-            "url": "https://acme.qa.egalvanic.ai/api/new-feature",  # New API endpoint
+            "url": "https://acme.egalvanic.ai/api/new-feature",  # New API endpoint
             "status": 200,
             "response": {
                 "feature_enabled": True,

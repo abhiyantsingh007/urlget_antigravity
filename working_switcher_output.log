@@ -1,0 +1,583 @@
+/Users/vishwa/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+╔════════════════════════════════════════════════════════════════╗
+║  WORKING SITE SWITCHER                                         ║
+║  Actually switches between ALL sites automatically!            ║
+╚════════════════════════════════════════════════════════════════╝
+    
+
+================================================================================
+AUTOMATED SITE SWITCHING & DATA CAPTURE
+Website: https://acme.egalvanic-rnd.com
+================================================================================
+
+🔐 Logging in to https://acme.egalvanic-rnd.com...
+✅ Logged in successfully
+
+🔍 Getting list of all sites...
+✅ Found 24 sites:
+   • All Facilities
+   • A1S
+   • Article Demo Site
+   • BCES Test Site - Aiden
+   • DEMO-103126
+   • EHE NEW TS
+   • EHE NTS 2
+   • EHE SKM TEST
+   • Johnston Boiler-Ferrysburg
+   • M Electric - Jacksonville HQ
+   • MC Testing
+   • SAMPLE SITE 102925
+   • Saveland Avenue Lofts
+   • Site Alaska
+   • site_38917
+   • site657
+   • site658
+   • site688
+   • SKM - Champlin Dry Run
+   • Test Site
+   • test site -89
+   • TS3
+   • TS4
+   • TST Distribution Center
+
+🔄 Switching through 24 sites and capturing data...
+
+[1/24] Switching to: All Facilities
+   ❌ Error selecting site 'All Facilities': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[2/24] Switching to: A1S
+   ❌ Error selecting site 'A1S': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[3/24] Switching to: Article Demo Site
+   ❌ Error selecting site 'Article Demo Site': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[4/24] Switching to: BCES Test Site - Aiden
+   ❌ Error selecting site 'BCES Test Site - Aiden': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[5/24] Switching to: DEMO-103126
+   ❌ Error selecting site 'DEMO-103126': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[6/24] Switching to: EHE NEW TS
+   ❌ Error selecting site 'EHE NEW TS': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[7/24] Switching to: EHE NTS 2
+   ❌ Error selecting site 'EHE NTS 2': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[8/24] Switching to: EHE SKM TEST
+   ❌ Error selecting site 'EHE SKM TEST': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[9/24] Switching to: Johnston Boiler-Ferrysburg
+   ❌ Error selecting site 'Johnston Boiler-Ferrysburg': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[10/24] Switching to: M Electric - Jacksonville HQ
+   ❌ Error selecting site 'M Electric - Jacksonville HQ': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[11/24] Switching to: MC Testing
+   ❌ Error selecting site 'MC Testing': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[12/24] Switching to: SAMPLE SITE 102925
+   ❌ Error selecting site 'SAMPLE SITE 102925': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[13/24] Switching to: Saveland Avenue Lofts
+   ❌ Error selecting site 'Saveland Avenue Lofts': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[14/24] Switching to: Site Alaska
+   ❌ Error selecting site 'Site Alaska': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[15/24] Switching to: site_38917
+   ❌ Error selecting site 'site_38917': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[16/24] Switching to: site657
+   ❌ Error selecting site 'site657': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[17/24] Switching to: site658
+   ❌ Error selecting site 'site658': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[18/24] Switching to: site688
+   ❌ Error selecting site 'site688': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[19/24] Switching to: SKM - Champlin Dry Run
+   ❌ Error selecting site 'SKM - Champlin Dry Run': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[20/24] Switching to: Test Site
+   ❌ Error selecting site 'Test Site': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[21/24] Switching to: test site -89
+   ❌ Error selecting site 'test site -89': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[22/24] Switching to: TS3
+   ❌ Error selecting site 'TS3': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[23/24] Switching to: TS4
+   ❌ Error selecting site 'TS4': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+[24/24] Switching to: TST Distribution Center
+   ❌ Error selecting site 'TST Distribution Center': Message: 
+Stacktrace:
+0   chromedriver                        0x000000010299eecc cxxbridge1$str$ptr + 2941512
+1   chromedriver                        0x0000000102996b88 cxxbridge1$str$ptr + 2907908
+2   chromedriver                        0x00000001024ae2b0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74020
+3   chromedriver                        0x00000001024f588c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 366336
+4   chromedriver                        0x0000000102536d54 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 633800
+5   chromedriver                        0x00000001024e9ef0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 318820
+6   chromedriver                        0x00000001029620c8 cxxbridge1$str$ptr + 2692164
+7   chromedriver                        0x00000001029658dc cxxbridge1$str$ptr + 2706520
+8   chromedriver                        0x000000010294284c cxxbridge1$str$ptr + 2563016
+9   chromedriver                        0x00000001029661b4 cxxbridge1$str$ptr + 2708784
+10  chromedriver                        0x00000001029340f4 cxxbridge1$str$ptr + 2503792
+11  chromedriver                        0x0000000102985498 cxxbridge1$str$ptr + 2836500
+12  chromedriver                        0x000000010298561c cxxbridge1$str$ptr + 2836888
+13  chromedriver                        0x00000001029967d8 cxxbridge1$str$ptr + 2906964
+14  libsystem_pthread.dylib             0x0000000182d18c08 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000182d13ba8 thread_start + 8
+
+   ⚠️  Skipped
+
+================================================================================
+✅ SUCCESS! Captured data from 0 sites
+📁 Data saved to: rnd_site_capture.json
+================================================================================
+
+📊 SUMMARY:
+
+✅ Done! You can now run this script again with the new website URL
+   to capture the AI website and compare them.

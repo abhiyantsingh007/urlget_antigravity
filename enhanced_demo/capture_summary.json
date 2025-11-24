@@ -1,0 +1,16 @@
+{
+  "capture_timestamp": "2025-11-21T23:25:00.123456",
+  "base_url": "https://acme.egalvanic.ai",
+  "sites_captured": [
+    "London UK",
+    "All Facilities",
+    "Melbourne AU",
+    "ShowSite3",
+    "test",
+    "test site",
+    "Toronto Canada"
+  ],
+  "total_sites": 7,
+  "total_api_responses": 42,
+  "output_directory": "enhanced_demo"
+}

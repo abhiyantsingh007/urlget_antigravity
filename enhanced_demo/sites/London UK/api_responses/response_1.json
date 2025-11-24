@@ -1,0 +1,25 @@
+{
+  "url": "https://acme.egalvanic.ai/api/assets",
+  "status": 200,
+  "mimeType": "application/json",
+  "timestamp": 1700643708123,
+  "response": {
+    "assets": [
+      {
+        "id": 101,
+        "name": "Main Transformer",
+        "type": "Electrical",
+        "status": "Operational",
+        "location": "Building A"
+      },
+      {
+        "id": 102,
+        "name": "Backup Generator",
+        "type": "Mechanical",
+        "status": "Maintenance",
+        "location": "Building B"
+      }
+    ]
+  },
+  "site": "London UK"
+}

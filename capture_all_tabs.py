@@ -14,7 +14,7 @@ def capture_all_tabs_data():
     """Capture data from all tabs/pages of the ACME website"""
     
     # Configuration with correct credentials
-    BASE_URL = "https://acme.qa.egalvanic.ai"
+    BASE_URL = "https://acme.egalvanic.ai"
     EMAIL = "rahul+acme@egalvanic.com"
     PASSWORD = "RP@egalvanic123"
     

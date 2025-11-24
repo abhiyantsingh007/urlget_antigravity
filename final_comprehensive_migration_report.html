@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Final Comprehensive Migration Verification Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f8f9fa; }
+        h1, h2, h3 { color: #333; }
+        .header { background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        .summary { background-color: #ffffff; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .critical { color: #dc3545; font-weight: bold; }
+        .minor { color: #ffc107; }
+        .identical { color: #28a745; }
+        .endpoint-report { background-color: #ffffff; border: 1px solid #dee2e6; margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .difference { background-color: #f8f9fa; padding: 15px; margin: 15px 0; border-left: 4px solid #17a2b8; border-radius: 4px; }
+        .critical-diff { border-left-color: #dc3545; }
+        .minor-diff { border-left-color: #ffc107; }
+        .added-diff { border-left-color: #28a745; }
+        .removed-diff { border-left-color: #6c757d; }
+        pre { background-color: #e9ecef; padding: 12px; overflow-x: auto; white-space: pre-wrap; border-radius: 4px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .stat-card { background: white; border: 1px solid #dee2e6; padding: 20px; text-align: center; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .stat-number { font-size: 28px; font-weight: bold; margin: 10px 0; }
+        .critical .stat-number { color: #dc3545; }
+        .minor .stat-number { color: #ffc107; }
+        .identical .stat-number { color: #28a745; }
+        .total .stat-number { color: #007bff; }
+        .only-old .stat-number { color: #dc3545; }
+        .only-new .stat-number { color: #17a2b8; }
+        .highlight { background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; }
+        .recommendations li { margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>FINAL COMPREHENSIVE MIGRATION VERIFICATION REPORT</h1>
+        <p>Detailed analysis of all API endpoints and data differences between old and new websites</p>
+    </div>
+    
+    <div class="summary">
+        <h2>Executive Summary</h2>
+        <p><strong>Verification Completed:</strong> 2025-11-22T15:52:01.037849</p>
+        <p><strong>Old Website Data Source:</strong> OLD_WEBSITE_CAPTURE</p>
+        <p><strong>New Website Data Source:</strong> NEW_WEBSITE_CAPTURE</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card total">
+                <div class="stat-number">3</div>
+                <div>Total Endpoints Analyzed</div>
+            </div>
+            <div class="stat-card critical">
+                <div class="stat-number">2</div>
+                <div>Critical Issues</div>
+            </div>
+            <div class="stat-card minor">
+                <div class="stat-number">1</div>
+                <div>Minor Differences</div>
+            </div>
+            <div class="stat-card identical">
+                <div class="stat-number">0</div>
+                <div>Identical Endpoints</div>
+            </div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card only-old">
+                <div class="stat-number">0</div>
+                <div>Missing in New Site</div>
+            </div>
+            <div class="stat-card only-new">
+                <div class="stat-number">0</div>
+                <div>New in Migrated Site</div>
+            </div>
+        </div>
+    </div>
+    
+    <h2>Detailed Endpoint Analysis</h2>
+    <p>This section provides a comprehensive analysis of each API endpoint, highlighting all differences found between the old and new websites.</p>
+    <h3><span class="critical">⚠️ CRITICAL ENDPOINTS (Require Immediate Attention)</span></h3>
+    <div class="endpoint-report">
+        <h3><code>/api/dashboard/stats</code> <span class="critical">CRITICAL ISSUES FOUND</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://acme.egalvanic-rnd.com/api/dashboard/stats</code><br>  🔹 New: <code>https://acme.egalvanic.ai/api/dashboard/stats</code></p>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>url</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>https://acme.egalvanic-rnd.com/api/dashboard/stats</code><br>  🔸 New: <code>https://acme.egalvanic.ai/api/dashboard/stats</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>response.total_users</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>127</code><br>  🔸 New: <code>129</code></p>
+        </div>
+        <div class="difference critical-diff">
+            <h4>CRITICAL DATA LOSS ⚠️: <code>response.sites_overview.Site657.total_assets</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>1</code><br>  🔸 New: <code>0</code></p>
+            <p><strong>Impact:</strong> <span class="critical">CRITICAL - Data loss detected, requires immediate investigation</span></p>
+        </div>
+        <div class="difference critical-diff">
+            <h4>CRITICAL DATA LOSS ⚠️: <code>response.sites_overview.Site657.total_value</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>50000</code><br>  🔸 New: <code>0</code></p>
+            <p><strong>Impact:</strong> <span class="critical">CRITICAL - Data loss detected, requires immediate investigation</span></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>response.sites_overview.All Facilities.total_assets</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>2535</code><br>  🔸 New: <code>1048</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>response.sites_overview.All Facilities.total_value</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>1250000</code><br>  🔸 New: <code>520000</code></p>
+        </div>
+    </div>
+    <div class="endpoint-report">
+        <h3><code>/api/sites/overview</code> <span class="critical">CRITICAL ISSUES FOUND</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://acme.egalvanic-rnd.com/api/sites/overview</code><br>  🔹 New: <code>https://acme.egalvanic.ai/api/sites/overview</code></p>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>url</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>https://acme.egalvanic-rnd.com/api/sites/overview</code><br>  🔸 New: <code>https://acme.egalvanic.ai/api/sites/overview</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>response[0].total_assets</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>2535</code><br>  🔸 New: <code>1048</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>response[0].critical_issues</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>3</code><br>  🔸 New: <code>5</code></p>
+        </div>
+        <div class="difference critical-diff">
+            <h4>CRITICAL DATA LOSS ⚠️: <code>response[1].total_assets</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>1</code><br>  🔸 New: <code>0</code></p>
+            <p><strong>Impact:</strong> <span class="critical">CRITICAL - Data loss detected, requires immediate investigation</span></p>
+        </div>
+    </div>
+    <h3><span class="minor">⚠️ ENDPOINTS WITH MINOR DIFFERENCES</span></h3>
+    <div class="endpoint-report">
+        <h3><code>/api/assets/summary</code> <span class="minor">MINOR DIFFERENCES FOUND</span></h3><p><strong>Endpoint URLs:</strong><br>  🔹 Old: <code>https://acme.egalvanic-rnd.com/api/assets/summary</code><br>  🔹 New: <code>https://acme.egalvanic.ai/api/assets/summary</code></p>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>url</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>https://acme.egalvanic-rnd.com/api/assets/summary</code><br>  🔸 New: <code>https://acme.egalvanic.ai/api/assets/summary</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>response.total_count</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>5432</code><br>  🔸 New: <code>2156</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>response.by_category.HVAC</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>1532</code><br>  🔸 New: <code>586</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>response.by_category.Mechanical</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>1800</code><br>  🔸 New: <code>720</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>response.by_category.Electrical</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>2100</code><br>  🔸 New: <code>850</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>response.by_status.Operational</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>4800</code><br>  🔸 New: <code>1900</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>response.by_status.Maintenance</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>432</code><br>  🔸 New: <code>172</code></p>
+        </div>
+        <div class="difference minor-diff">
+            <h4>VALUE CHANGED 🔄: <code>response.by_status.Decommissioned</code></h4>
+            <p><strong>Values:</strong><br>  🔸 Old: <code>200</code><br>  🔸 New: <code>86</code></p>
+        </div>
+    </div>
+    <h2>Recommendations</h2>
+    <ol class="recommendations">
+        <li><span class="critical">🔴 CRITICAL ACTION REQUIRED:</span> Investigate 2 critical issues immediately
+            <br><strong>Action:</strong> Check data migration process for endpoints with critical data loss and missing endpoints</li>
+        <li><span class="minor">🟡 REVIEW RECOMMENDED:</span> Review 1 endpoints with differences
+            <br><strong>Action:</strong> Verify that changes are intentional and document them</li>
+    </ol>
+    
+    <h2>Verification Methodology</h2>
+    <ul>
+        <li><strong>Endpoint Matching:</strong> APIs matched by path to ensure equivalent comparisons between old and new sites</li>
+        <li><strong>Deep JSON Analysis:</strong> Complete recursive comparison of all nested objects and arrays in API responses</li>
+        <li><strong>Critical Issue Detection:</strong> Special algorithms to identify data loss patterns (positive values changing to zero)</li>
+        <li><strong>Severity Classification:</strong> Automatic categorization of differences by business impact</li>
+        <li><strong>Comprehensive Reporting:</strong> Detailed visualization of all discrepancies with clear paths to problematic data</li>
+    </ul>
+    
+    <div class="summary" style="margin-top: 30px;">
+        <h3>About This Report</h3>
+        <p>This comprehensive migration verification report was automatically generated by analyzing all API responses from both the old and new websites. 
+        The system performed deep comparisons of JSON structures to identify every difference, with special attention to critical data loss patterns.</p>
+        <p><strong>Specific Issues Detected:</strong></p>
+        <ul>
+            <li><span class="highlight">All Facilities asset count:</span> 2,535 assets → 1,048 assets (Major difference requiring investigation)</li>
+            <li><span class="highlight">Site657 asset count:</span> 1 asset → 0 assets (<span class="critical">CRITICAL DATA LOSS</span>)</li>
+            <li>And all other metric changes throughout the system</li>
+        </ul>
+    </div>
+    
+    <p style="text-align: center; margin-top: 30px; color: #6c757d;">
+        <em>This report was automatically generated by the Final Comprehensive Migration Verification Framework.</em>
+    </p>
+</body>
+</html>
